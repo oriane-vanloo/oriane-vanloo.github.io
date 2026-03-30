@@ -1,1 +1,1189 @@
-<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=index.html"><title>Redirecting...</title></head><body><a href="index-playful.html">Click here if not redirected</a></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oriane Van Loo, Principal AI Experience and Product Designer</title>
+  <meta name="description" content="Principal AI Experience & Product Designer with 12+ years designing consumer products across travel, fintech and SaaS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #FFFDF5;
+      --fg:       #1E293B;
+      --muted:    #F1F5F9;
+      --muted-fg: #64748B;
+      --accent:   #8B5CF6;
+      --accent-fg:#FFFFFF;
+      --pink:     #F472B6;
+      --yellow:   #FBBF24;
+      --mint:     #34D399;
+      --border:   #E2E8F0;
+      --card:     #FFFFFF;
+      --shadow:   4px 4px 0px 0px #1E293B;
+      --shadow-lg:8px 8px 0px 0px #1E293B;
+      --shadow-sm:2px 2px 0px 0px #1E293B;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ─── DOT PATTERN UTILITY ─── */
+    .dot-bg {
+      background-image: radial-gradient(circle, #CBD5E1 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 100;
+      padding: 1rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,253,245,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 2px solid var(--fg);
+    }
+    .nav-logo {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--fg);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 0.4rem; list-style: none; align-items: center; }
+    .nav-links a {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--fg);
+      text-decoration: none;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      border: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    .nav-links a:hover {
+      background: var(--yellow);
+      border-color: var(--fg);
+      box-shadow: var(--shadow-sm);
+      transform: translate(-1px,-1px);
+    }
+    .nav-cta {
+      background: var(--accent) !important;
+      color: #fff !important;
+      border-color: var(--fg) !important;
+      box-shadow: var(--shadow-sm) !important;
+    }
+    .nav-cta:hover {
+      background: #7C3AED !important;
+      transform: translate(-2px,-2px) !important;
+      box-shadow: 4px 4px 0px var(--fg) !important;
+    }
+
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 100vh;
+      padding: 9rem 3rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg);
+    }
+
+    /* Floating geometric deco shapes */
+    .deco { position: absolute; pointer-events: none; }
+    .deco-circle-big {
+      width: 420px; height: 420px;
+      background: var(--yellow);
+      border-radius: 50%;
+      top: 5%; left: -8%;
+      opacity: 0.35;
+      z-index: 0;
+    }
+    .deco-circle-sm {
+      width: 90px; height: 90px;
+      background: var(--mint);
+      border-radius: 50%;
+      top: 15%; right: 8%;
+      border: 2px solid var(--fg);
+      z-index: 0;
+    }
+    .deco-square {
+      width: 60px; height: 60px;
+      background: var(--pink);
+      border: 2px solid var(--fg);
+      transform: rotate(20deg);
+      bottom: 22%; right: 3%;
+      z-index: 0;
+      box-shadow: var(--shadow);
+    }
+    .deco-triangle {
+      width: 0; height: 0;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-bottom: 70px solid var(--accent);
+      bottom: 30%; left: 3%;
+      opacity: 0.5;
+      z-index: 0;
+    }
+    .deco-pill {
+      width: 120px; height: 48px;
+      background: var(--pink);
+      border-radius: 9999px;
+      border: 2px solid var(--fg);
+      top: 8%; right: 30%;
+      transform: rotate(-12deg);
+      z-index: 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .deco-dots {
+      width: 140px; height: 140px;
+      background-image: radial-gradient(circle, #1E293B 2px, transparent 2px);
+      background-size: 16px 16px;
+      bottom: 10%; left: 40%;
+      z-index: 0;
+      opacity: 0.15;
+    }
+
+    /* squiggle SVG divider */
+    .squiggle { display: block; width: 100%; overflow: hidden; line-height: 0; }
+
+    .hero-text { position: relative; z-index: 1; }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--yellow);
+      color: var(--fg);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      border: 2px solid var(--fg);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.5rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--fg);
+      flex-shrink: 0;
+    }
+
+    .hero-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(3rem, 5.5vw, 5.2rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--fg);
+      margin-bottom: 1.5rem;
+    }
+    .hero-heading .hl-violet { color: var(--accent); }
+    .hero-heading .hl-pink   { color: var(--pink); }
+    .hero-heading .hl-yellow {
+      background: var(--yellow);
+      padding: 0 0.15em;
+      border-radius: 6px;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--muted-fg);
+      max-width: 460px;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+
+    /* Candy Button */
+    .btn-candy {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.85rem 1.6rem;
+      border-radius: 9999px;
+      border: 2px solid var(--fg);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+      transition: all 0.15s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .btn-candy:hover {
+      transform: translate(-2px,-2px);
+      box-shadow: 6px 6px 0px var(--fg);
+    }
+    .btn-candy:active {
+      transform: translate(2px,2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-icon {
+      width: 28px; height: 28px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* Ghost Button */
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--fg);
+      text-decoration: none;
+      padding: 0.85rem 1.6rem;
+      border-radius: 9999px;
+      border: 2px solid var(--fg);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      transition: all 0.15s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .btn-ghost:hover {
+      background: var(--yellow);
+      transform: translate(-2px,-2px);
+      box-shadow: var(--shadow);
+    }
+
+    /* Hero right: photo blob */
+    .hero-visual {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .photo-blob {
+      width: 100%;
+      max-width: 440px;
+      aspect-ratio: 3/4;
+      background: var(--card);
+      border-radius: 60% 40% 55% 45% / 50% 45% 55% 50%;
+      border: 2.5px solid var(--fg);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      position: relative;
+    }
+    .photo-blob img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .photo-blob-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      background: var(--mint);
+      color: var(--fg);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      opacity: 0.6;
+      text-align: center;
+      padding: 2rem;
+    }
+    /* floating badges on photo */
+    .photo-badge {
+      position: absolute;
+      background: var(--card);
+      border: 2px solid var(--fg);
+      border-radius: 12px;
+      padding: 0.6rem 1rem;
+      box-shadow: var(--shadow);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--fg);
+      z-index: 10;
+      white-space: nowrap;
+    }
+    .badge-yrs  { bottom: 16%; left: -12%; background: var(--yellow); transform: rotate(-3deg); }
+    .badge-role { top: 12%; right: -10%; background: var(--accent); color: #fff; transform: rotate(4deg); }
+    .badge-loc  { bottom: 8%; right: -8%; background: var(--pink); transform: rotate(-2deg); }
+
+    /* hero scroll hint */
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted-fg);
+      z-index: 2;
+    }
+    .scroll-line {
+      width: 32px; height: 2px;
+      background: var(--fg);
+      border-radius: 2px;
+    }
+
+    /* ─── SECTION COMMON ─── */
+    section { padding: 6rem 3rem; }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--fg);
+      background: var(--yellow);
+      padding: 0.3rem 0.9rem;
+      border-radius: 9999px;
+      border: 2px solid var(--fg);
+      margin-bottom: 1rem;
+    }
+    .section-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--fg);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+    .section-heading em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--muted-fg);
+      line-height: 1.75;
+      max-width: 460px;
+    }
+
+    /* ─── WORK ─── */
+    #work { background: var(--muted); position: relative; }
+
+    .work-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    /* company section label strip */
+    .company-strip {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2.5rem 0 1.5rem;
+    }
+    .company-strip-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted-fg);
+      white-space: nowrap;
+    }
+    .company-strip-line {
+      flex: 1;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, var(--border) 0, var(--border) 6px, transparent 6px, transparent 12px);
+    }
+
+    .projects-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .company-cards {
+      display: grid;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .company-cards.cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .company-cards.cols-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Sticker Card */
+    .project-card {
+      background: var(--card);
+      border: 2px solid var(--fg);
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+      padding: 1.75rem;
+      position: relative;
+      transition: all 0.25s cubic-bezier(0.34,1.56,0.64,1);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card:hover {
+      transform: translate(-3px,-3px) rotate(-0.5deg);
+      box-shadow: 12px 12px 0px var(--fg);
+    }
+    .project-card.wide { grid-column: 1 / -1; }
+
+    /* Ghost number */
+    .project-card::before {
+      content: attr(data-num);
+      position: absolute;
+      top: 1rem; right: 1.5rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 5rem;
+      font-weight: 800;
+      color: var(--muted);
+      line-height: 1;
+      pointer-events: none;
+      z-index: 0;
+      letter-spacing: -0.05em;
+    }
+
+    /* card cover */
+    .card-cover {
+      height: 160px;
+      border-radius: 12px;
+      border: 2px solid var(--fg);
+      margin-bottom: 1.25rem;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .project-card.wide .card-cover { height: 180px; }
+    .card-cover img { width:100%; height:100%; object-fit:cover; display:block; }
+    .cover-ai-variants  { background: linear-gradient(135deg,#4C1D95,#7C3AED,#C084FC); }
+    .cover-ai-coach     { background: linear-gradient(135deg,#0F172A,#1E3A5F,#1D4ED8); }
+    .cover-hitch-ds     { background: linear-gradient(135deg,#1E293B,#4C1D95,#8B5CF6); }
+    .cover-map-first    { background: linear-gradient(135deg,#064E3B,#065F46,#34D399); }
+    .cover-checkout     { background: linear-gradient(135deg,#0F172A,#1E3A8A,#3B82F6); }
+    .cover-express      { background: linear-gradient(135deg,#1E0B4A,#4C1D95,#A855F7); }
+    .cover-frictionless { background: linear-gradient(135deg,#0C1A2E,#1E3A5F,#0891B2); }
+    .cover-optus        { background: linear-gradient(135deg,#052E16,#14532D,#22C55E); }
+    .cover-label {
+      position: absolute; bottom:10px; left:12px;
+      font-family:'Outfit',sans-serif; font-size:0.6rem; font-weight:700;
+      letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.6);
+    }
+
+    /* floating icon blob on card */
+    .card-icon {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--fg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+      position: absolute;
+      top: -14px; left: 1.75rem;
+      z-index: 2;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card-meta {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--muted-fg);
+      margin-bottom: 0.75rem;
+      position: relative; z-index: 1;
+    }
+
+    .card-tags {
+      display: flex; flex-wrap: wrap; gap: 0.4rem;
+      margin-bottom: 1rem;
+      position: relative; z-index: 1;
+    }
+    .card-tag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.7rem;
+      border-radius: 9999px;
+      border: 1.5px solid var(--fg);
+      color: var(--fg);
+      background: var(--bg);
+    }
+
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--fg);
+      margin-bottom: 0.75rem;
+      position: relative; z-index: 1;
+    }
+    .card-desc {
+      font-size: 0.88rem;
+      color: var(--muted-fg);
+      line-height: 1.7;
+      flex: 1;
+      position: relative; z-index: 1;
+    }
+
+    .card-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1.25rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      position: relative; z-index: 1;
+    }
+    .card-arrow::after { content: '→'; }
+
+    /* ─── ABOUT ─── */
+    #about {
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
+    .about-deco-circle {
+      position: absolute;
+      width: 300px; height: 300px;
+      background: var(--accent);
+      border-radius: 50%;
+      bottom: -80px; right: -80px;
+      opacity: 0.08;
+    }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 5rem;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative; z-index: 1;
+    }
+    .about-photo {
+      position: relative;
+    }
+    .about-img-wrap {
+      aspect-ratio: 3/4;
+      background: var(--pink);
+      border-radius: 40% 60% 50% 50% / 55% 45% 55% 45%;
+      border: 2.5px solid var(--fg);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      max-height: 480px;
+    }
+    .about-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .about-img-placeholder {
+      width:100%; height:100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 0.75rem;
+      color: rgba(255,255,255,0.7);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-align: center;
+      padding: 2rem;
+    }
+    /* sticker badges on about photo */
+    .about-badge {
+      position: absolute;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 0.78rem;
+      background: var(--card);
+      border: 2px solid var(--fg);
+      border-radius: 10px;
+      padding: 0.5rem 0.9rem;
+      box-shadow: var(--shadow);
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+    }
+    .ab-years { top: 10%; left: -14%; background: var(--yellow); transform: rotate(-4deg); }
+    .ab-role  { bottom: 18%; left: -16%; background: var(--mint); transform: rotate(3deg); }
+    .ab-love  { top: 30%; right: -12%; background: var(--accent); color: #fff; transform: rotate(-2deg); }
+
+    .about-text .section-eyebrow { margin-bottom: 1.5rem; }
+    .about-quote {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      color: var(--fg);
+      margin-bottom: 1.5rem;
+    }
+    .about-quote em { font-style: normal; color: var(--accent); }
+    .about-p {
+      font-size: 0.97rem;
+      color: var(--muted-fg);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .about-stats {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    .stat-item {}
+    .stat-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--accent);
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted-fg);
+    }
+    .about-links {
+      display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem;
+    }
+    .about-link {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--fg);
+      text-decoration: none;
+      padding: 0.5rem 1.1rem;
+      border-radius: 9999px;
+      border: 2px solid var(--fg);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.18s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .about-link:hover {
+      background: var(--yellow);
+      transform: translate(-2px,-2px);
+      box-shadow: var(--shadow);
+    }
+
+    /* ─── CONTACT ─── */
+    #contact {
+      background: var(--fg);
+      position: relative;
+      overflow: hidden;
+    }
+    /* big decorative circle */
+    #contact::before {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      border: 60px solid var(--accent);
+      right: -120px; top: -120px;
+      opacity: 0.12;
+    }
+    #contact::after {
+      content: '';
+      position: absolute;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: var(--yellow);
+      left: -60px; bottom: -60px;
+      opacity: 0.15;
+    }
+    .contact-inner { max-width: 620px; position: relative; z-index: 1; }
+    #contact .section-eyebrow { background: var(--accent); color: #fff; border-color: var(--accent); }
+    #contact .section-heading { color: #fff; }
+    #contact .section-sub { color: rgba(255,255,255,0.5); margin-bottom: 2.5rem; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-label {
+      display: block;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.5rem;
+    }
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      background: rgba(255,255,255,0.06);
+      border: 2px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.92rem;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.25); }
+    .form-input:focus, .form-textarea:focus {
+      border-color: var(--accent);
+      background: rgba(139,92,246,0.1);
+      box-shadow: 4px 4px 0px var(--accent);
+    }
+    .form-textarea { resize: vertical; min-height: 120px; }
+    .g-recaptcha { margin-bottom: 1.25rem; transform-origin: left top; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--fg);
+      border-top: 2px solid rgba(255,255,255,0.06);
+      padding: 3.5rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative; z-index: 1;
+    }
+    .footer-logo {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+    }
+    .footer-copy {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.2);
+    }
+
+    /* ─── SCROLL REVEAL ─── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      #hero { grid-template-columns: 1fr; padding: 8rem 1.5rem 4rem; }
+      .hero-visual { display: none; }
+      section { padding: 4rem 1.5rem; }
+      .work-header { flex-direction: column; }
+      .company-cards { grid-template-columns: 1fr !important; }
+      .project-card.wide { grid-column: auto; }
+      .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 0.5rem; }
+      .deco-circle-big, .deco-pill, .deco-square, .deco-triangle { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .project-card:hover { transform: none; }
+      .btn-candy:hover, .btn-ghost:hover { transform: none; }
+      .fade-up { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#hero" class="nav-logo">Oriane<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════ HERO ═══════ -->
+  <section id="hero">
+    <!-- Deco shapes -->
+    <div class="deco deco-circle-big"></div>
+    <div class="deco deco-circle-sm"></div>
+    <div class="deco deco-square"></div>
+    <div class="deco deco-triangle"></div>
+    <div class="deco deco-pill"></div>
+    <div class="deco deco-dots dot-bg"></div>
+
+    <div class="hero-text">
+      <p class="hero-eyebrow fade-up">AI Experience · Product</p>
+      <h1 class="hero-heading fade-up">
+        Designing for<br>
+        <span class="hl-violet">people</span> at the<br>
+        edge of <span class="hl-yellow">AI</span> &amp;<br>
+        <span class="hl-pink">experience.</span>
+      </h1>
+      <p class="hero-sub fade-up">
+        I'm Oriane, a Principal AI Experience &amp; Product Designer with over 12 years shaping consumer products across travel, fintech, and SaaS.
+      </p>
+      <div class="hero-actions fade-up">
+        <a href="#work" class="btn-candy">
+          See my work
+          <span class="btn-icon">↗</span>
+        </a>
+        <a href="#contact" class="btn-ghost">Say hello</a>
+      </div>
+    </div>
+
+    <div class="hero-visual fade-up">
+      <div style="position:relative; width:100%; max-width:420px;">
+        <div class="photo-blob">
+          <img src="oriane.jpg" alt="Oriane Van Loo" onerror="this.parentNode.innerHTML='<div class=\'photo-blob-placeholder\'>✦<br>Add oriane.jpg<br>here</div>'">
+        </div>
+        <div class="photo-badge badge-yrs">12+ years experience</div>
+        <div class="photo-badge badge-role">Principal Designer</div>
+        <div class="photo-badge badge-loc">Melbourne</div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span class="scroll-line"></span>
+      Scroll to explore
+    </div>
+  </section>
+
+  <!-- ═══════ WORK ═══════ -->
+  <section id="work">
+    <div class="work-header">
+      <div>
+        <span class="section-eyebrow">Selected Work</span>
+        <h2 class="section-heading">Projects &amp; <em>case studies</em></h2>
+      </div>
+      <p class="section-sub">
+        A selection of work across AI, travel, fintech, and SaaS. New product creation and large-scale redesigns.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- ══ Rome2Rio ══ -->
+      <div class="company-strip">
+        <span class="company-strip-label">Rome2Rio · 2024–Present</span>
+        <span class="company-strip-line"></span>
+      </div>
+
+      <div class="company-cards cols-3">
+      <!-- Card 01: AI Design Variants -->
+      <div class="project-card fade-up" data-num="01" data-href="project-ai-variants.html">
+        <div class="card-cover cover-ai-variants" style="background:none;padding:0;position:relative;">
+          <img src="img/ai-variants-photo.jpg" alt="AI Design Variants" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
+          <span class="cover-label">Rome2Rio · 2025</span>
+        </div>
+        <p class="card-meta">01 · 2025–Present · Rome2Rio</p>
+        <div class="card-tags">
+          <span class="card-tag">AI</span>
+          <span class="card-tag">Design Process</span>
+          <span class="card-tag">Tooling</span>
+        </div>
+        <h3 class="card-title">AI-powered<br>design variants</h3>
+        <p class="card-desc">Built custom AI tools that let the design team generate and compare multiple interactive UI variants in minutes from a single design brief.</p>
+        <span class="card-arrow">View case study </span>
+      </div>
+
+      <!-- Card 02: Hitch 2.0 DS -->
+      <div class="project-card fade-up" data-num="02" data-href="project-hitch.html">
+        <div class="card-cover cover-hitch-ds" style="background:#111827;padding:0;position:relative;overflow:hidden;">
+          <img src="img/hitch-ds-cover.jpg" alt="Hitch 2.0" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:inherit;">
+          <span class="cover-label">Rome2Rio · 2024</span>
+        </div>
+        <p class="card-meta">02 · 2024 · Rome2Rio</p>
+        <div class="card-tags">
+          <span class="card-tag">Design Systems</span>
+          <span class="card-tag">Tokens</span>
+        </div>
+        <h3 class="card-title">Hitch 2.0<br>design system</h3>
+        <p class="card-desc">Built Rome2Rio's first design system from scratch: tokens, components, icons, and motion, giving design and engineering a shared language.</p>
+        <span class="card-arrow">View case study </span>
+      </div>
+
+      <!-- Card 03: Map First (wide) -->
+      <div class="project-card fade-up" data-num="03" data-href="project-map-first.html">
+        <div class="card-cover cover-map-first" style="background:none;padding:0;position:relative;">
+          <img src="img/map-first.jpg" alt="Map First" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
+          <span class="cover-label">Rome2Rio · Concept</span>
+        </div>
+        <p class="card-meta">03 · 2025 · Rome2Rio · Concept</p>
+        <div class="card-tags">
+          <span class="card-tag">Product Concept</span>
+          <span class="card-tag">Mobile UX</span>
+          <span class="card-tag">Strategy</span>
+        </div>
+        <h3 class="card-title">Map First</h3>
+        <p class="card-desc">A conceptual rethink of the Rome2Rio mobile app that puts the map front and centre, turning journey planning from a query into an exploration.</p>
+        <span class="card-arrow">View case study </span>
+      </div>
+
+      </div>
+
+            <!-- ══ Block · Afterpay ══ -->
+      <div class="company-strip">
+        <span class="company-strip-label">Block · Afterpay · 2021–2025</span>
+        <span class="company-strip-line"></span>
+      </div>
+
+      <div class="company-cards cols-2">
+      <!-- Card 04: AI Business Coach -->
+      <div class="project-card fade-up" data-num="04" data-href="project-ai-coach.html">
+        <div class="card-cover cover-ai-coach" style="background:none;padding:0;">
+          <img src="img/coach-screens.jpg" alt="AI Business Coach" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <span class="cover-label">Afterpay Hack Week</span>
+        </div>
+        <p class="card-meta">04 · Hack Week · Afterpay</p>
+        <div class="card-tags">
+          <span class="card-tag">AI</span>
+          <span class="card-tag">Rapid Prototype</span>
+        </div>
+        <h3 class="card-title">AI business<br>coach</h3>
+        <p class="card-desc">Designed and built a working AI coaching prototype in under 24 hours. Ranked first in hack week voting and sparked product team interest.</p>
+        <span class="card-arrow">View case study </span>
+      </div>
+
+      <!-- Card 05: Checkout -->
+      <div class="project-card fade-up" data-num="05" data-href="project-checkout.html">
+        <div class="card-cover cover-checkout" style="background:none;padding:0;">
+          <img src="img/checkout-redesign.jpg" alt="Checkout redesign" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <span class="cover-label">Afterpay · 2022–2025</span>
+        </div>
+        <p class="card-meta">05 · 2022–2025 · Afterpay</p>
+        <div class="card-tags">
+          <span class="card-tag">Product Design</span>
+          <span class="card-tag">Systems Design</span>
+        </div>
+        <h3 class="card-title">Checkout flow<br>optimisation</h3>
+        <p class="card-desc">Full redesign of Afterpay's checkout (15M+ sessions monthly). Simplified the UI, introduced modular components, and rebuilt trust at the moment of purchase.</p>
+        <span class="card-arrow">View case study </span>
+      </div>
+
+      <!-- Card 06: Express Checkout -->
+      <div class="project-card fade-up" data-num="06" data-href="project-express.html">
+        <div class="card-cover cover-express">
+          <span class="cover-label">Afterpay · 2021–2023</span>
+        </div>
+        <p class="card-meta">06 · 2021–2023 · Afterpay</p>
+        <div class="card-tags">
+          <span class="card-tag">Interaction Design</span>
+          <span class="card-tag">Research</span>
+        </div>
+        <h3 class="card-title">Afterpay express<br>checkout</h3>
+        <p class="card-desc">Redesigned the returning-customer flow so shoppers can complete a purchase in seconds using saved details.</p>
+        <span class="card-arrow">View case study </span>
+      </div>
+
+      <!-- Card 07: Frictionless (wide) -->
+      <div class="project-card fade-up" data-num="07" data-href="project-frictionless.html">
+        <div class="card-cover cover-frictionless" style="background:none;padding:0;">
+          <img src="img/frictionless-wallet.jpg" alt="Frictionless access" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <span class="cover-label">Afterpay · 2023–2025</span>
+        </div>
+        <p class="card-meta">07 · 2023–2025 · Afterpay · Block Inc</p>
+        <div class="card-tags">
+          <span class="card-tag">Mobile Design</span>
+          <span class="card-tag">Platform Integration</span>
+          <span class="card-tag">Auth</span>
+        </div>
+        <h3 class="card-title">Frictionless access &amp; digital wallets</h3>
+        <p class="card-desc">Biometric login, persistent sessions, and native Apple Pay + Google Pay integration. This resolved a 40% login failure rate and put Afterpay natively in the device wallet.</p>
+        <span class="card-arrow">View case study </span>
+      </div>
+
+      </div>
+
+            <!-- ══ LoyaltyCorp ══ -->
+      <div class="company-strip">
+        <span class="company-strip-label">LoyaltyCorp · 2017–2019</span>
+        <span class="company-strip-line"></span>
+      </div>
+
+      <div class="company-cards cols-2">
+      <!-- Card 08: Optus Perks -->
+      <div class="project-card fade-up" data-num="08" data-href="project-optus.html">
+        <div class="card-cover cover-optus" style="background:none;padding:0;">
+          <img src="img/optus-hero.jpg" alt="Optus Perks" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <span class="cover-label">LoyaltyCorp</span>
+        </div>
+        <p class="card-meta">08 · 2017–2019 · LoyaltyCorp</p>
+        <div class="card-tags">
+          <span class="card-tag">Product Design</span>
+          <span class="card-tag">Web Design</span>
+          <span class="card-tag">2FA</span>
+        </div>
+        <h3 class="card-title">Optus Perks<br>platform</h3>
+        <p class="card-desc">Full platform takeover for the Optus Perks team. Delivered a fully branded, scalable solution in 2 weeks: three entry points (My Optus App, website, EDMs), 2FA compliance, and seamless migration from the old platform.</p>
+        <div class="card-metrics" style="display:flex;gap:1.25rem;margin-top:0.75rem;flex-wrap:wrap;">
+          <div><span style="font-size:0.9rem;font-weight:800;color:var(--accent);display:block;">2 weeks</span><span style="font-size:0.7rem;color:var(--muted-fg);font-weight:500;">MVP delivered</span></div>
+          <div><span style="font-size:0.9rem;font-weight:800;color:var(--accent);display:block;">3 platforms</span><span style="font-size:0.7rem;color:var(--muted-fg);font-weight:500;">Unified entry points</span></div>
+        </div>
+        <span class="card-arrow">View case study </span>
+      </div>
+
+      <!-- Card 09: eWallet (wide) -->
+      <div class="project-card fade-up" data-num="09" data-href="project-ewallet.html">
+        <div class="card-cover" style="background:none;padding:0;position:relative;">
+          <img src="img/ewallet-cover.jpg" alt="eWallet by LoyaltyCorp" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
+          <span class="cover-label">LoyaltyCorp</span>
+        </div>
+        <p class="card-meta">09 · 2017–2019 · LoyaltyCorp</p>
+        <div class="card-tags">
+          <span class="card-tag">Fintech</span>
+          <span class="card-tag">White-label</span>
+          <span class="card-tag">Payments</span>
+        </div>
+        <h3 class="card-title">eWallet</h3>
+        <p class="card-desc">LoyaltyCorp's eWallet bridges brand loyalty and seamless payments. I designed the white-labelled consumer widget: secure card storage, 2FA flows, card verification, and an end-to-end payment system covering P2P, recurring payments, bill pay, and instalments.</p>
+        <span class="card-arrow">View case study </span>
+      </div>
+      </div>
+        </div>
+  </section>
+
+  <!-- ═══════ ABOUT ═══════ -->
+  <section id="about">
+    <div class="about-deco-circle"></div>
+    <div class="about-inner">
+      <div class="about-photo fade-up">
+        <div class="about-img-wrap">
+          <img src="oriane.jpg" alt="Oriane Van Loo" onerror="this.parentNode.innerHTML='<div class=\'about-img-placeholder\'>✦<br>oriane.jpg</div>'">
+        </div>
+        <div class="about-badge ab-years">12+ years</div>
+        <div class="about-badge ab-role">Melbourne</div>
+        <div class="about-badge ab-love">AI &amp; Product</div>
+      </div>
+      <div class="about-text fade-up">
+        <span class="section-eyebrow">About me</span>
+        <p class="about-quote">I turn <em>complexity</em> into clarity, and ideas into products people love.</p>
+        <p class="about-p">I'm Oriane, a Principal AI Experience &amp; Product Designer based in Melbourne, with 12+ years designing consumer products across travel, fintech, and SaaS. I work at the intersection of complex systems and human needs.</p>
+        <p class="about-p">I lead with purpose and care deeply about interaction quality while building systems that scale. I'm particularly drawn to AI experience design, where the thinking required is still being invented.</p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num">12+</span>
+            <span class="stat-label">Years experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Industries</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Products shipped</span>
+          </div>
+        </div>
+        <div class="about-links">
+          <a href="https://linkedin.com/in/orianevanloo" target="_blank" rel="noopener" class="about-link">LinkedIn ↗</a>
+          <a href="mailto:orianevanloo@gmail.com" class="about-link">orianevanloo@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ CONTACT ═══════ -->
+  <section id="contact">
+    <div class="contact-inner">
+      <span class="section-eyebrow">Get in touch</span>
+      <h2 class="section-heading">Let's make something<br><em style="color:var(--yellow)">great.</em></h2>
+      <p class="section-sub">Open to new opportunities, collaborations, or just a good design conversation.</p>
+
+      <form action="mailto:orianevanloo@gmail.com" method="post" enctype="text/plain">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="name">Your name</label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Your email</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="jane@company.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+        </div>
+        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY" data-theme="dark"></div>
+        <button type="submit" class="btn-candy">
+          Send message
+          <span class="btn-icon">✉</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <a href="#hero" class="footer-logo">Oriane Van Loo</a>
+    <p class="footer-copy">Designed with ✦ in Melbourne</p>
+  </footer>
+
+  <script>
+    // Card click navigation
+    document.querySelectorAll('.project-card[data-href]').forEach(card => {
+      card.addEventListener('click', () => window.location.href = card.dataset.href);
+    });
+
+    // Scroll reveal
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+    // Stagger hero fade-ups
+    document.querySelectorAll('#hero .fade-up').forEach((el, i) => {
+      el.style.transitionDelay = `${i * 0.12}s`;
+    });
+  </script>
+</body>
+</html>
