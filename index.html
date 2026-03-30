@@ -595,6 +595,122 @@
       position: relative;
       overflow: hidden;
     }
+    /* ═══ HIGHLIGHTS ═══ */
+    #highlights {
+      background: #F8F5FF;
+      padding: 6rem 4rem;
+    }
+    .highlights-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .highlights-header h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: var(--fg);
+      margin-bottom: 0.6rem;
+    }
+    .highlights-header p {
+      font-size: 1.05rem;
+      color: var(--muted-fg);
+    }
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .highlight-card {
+      background: #ffffff;
+      border: 2px solid var(--fg);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      overflow: visible;
+      box-shadow: 8px 8px 0px 0px #CBD5E1;
+      transform-origin: center bottom;
+      transition: box-shadow 300ms cubic-bezier(0.34, 1.56, 0.64, 1),
+                  transform  300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: default;
+    }
+    .highlight-card:hover {
+      box-shadow: 8px 8px 0px 0px var(--accent);
+      transform: rotate(-1deg) scale(1.02);
+    }
+    /* Pop-in entrance — override global fade-up for cards */
+    .highlight-card.fade-up {
+      opacity: 0;
+      transform: scale(0.75) rotate(0deg);
+      transition: opacity    450ms cubic-bezier(0.34, 1.56, 0.64, 1),
+                  transform  450ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .highlight-card.fade-up.visible {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+    .highlight-card.fade-up.visible:hover {
+      transform: scale(1.02) rotate(-1deg);
+      box-shadow: 8px 8px 0px 0px var(--accent);
+    }
+    /* Staggered entrance delay per card */
+    .highlights-grid .highlight-card:nth-child(1) { transition-delay: 0ms;   }
+    .highlights-grid .highlight-card:nth-child(2) { transition-delay: 60ms;  }
+    .highlights-grid .highlight-card:nth-child(3) { transition-delay: 120ms; }
+    .highlights-grid .highlight-card:nth-child(4) { transition-delay: 180ms; }
+    .highlights-grid .highlight-card:nth-child(5) { transition-delay: 240ms; }
+    .highlights-grid .highlight-card:nth-child(6) { transition-delay: 300ms; }
+    /* Reset delay on hover so it feels instant */
+    .highlights-grid .highlight-card:hover { transition-delay: 0ms; }
+    /* Corner notch — bottom+left borders only, rounded bottom-left */
+    .highlight-card::after {
+      content: '';
+      position: absolute;
+      top: -2px; right: -2px;
+      width: 32px; height: 32px;
+      border-bottom: 2px solid var(--fg);
+      border-left: 2px solid var(--fg);
+      border-radius: 0 18px 0 16px;
+      background: var(--card-accent, #8B5CF6);
+    }
+    .highlight-icon {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      border: 2px solid var(--fg);
+      box-shadow: 2px 2px 0px 0px var(--fg);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .highlight-icon svg {
+      width: 24px; height: 24px;
+      stroke: var(--fg);
+      stroke-width: 2.5;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .highlight-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--fg);
+      margin-bottom: 0.6rem;
+    }
+    .highlight-desc {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: var(--muted-fg);
+    }
+    @media (max-width: 900px) {
+      #highlights { padding: 4rem 1.5rem; }
+      .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 580px) {
+      .highlights-grid { grid-template-columns: 1fr; }
+    }
+
     .about-deco-circle {
       position: absolute;
       width: 300px; height: 300px;
@@ -954,7 +1070,7 @@
       <!-- Card 03: Map First (wide) -->
       <div class="project-card fade-up" data-num="03" data-href="project-map-first.html">
         <div class="card-cover cover-map-first" style="background:none;padding:0;position:relative;">
-          <img src="img/map-first.jpg" alt="Map First" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
+          <img src="img/globe.jpeg" alt="Map First" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
           <span class="cover-label">Rome2Rio · Concept</span>
         </div>
         <p class="card-meta">03 · 2025 · Rome2Rio · Concept</p>
@@ -1050,7 +1166,7 @@
       <!-- Card 11: Cash App Bill Split -->
       <div class="project-card fade-up" data-num="11" data-href="project-cashapp.html">
         <div class="card-cover" style="background:#000000;padding:0;position:relative;">
-          <img src="img/cashapp-screens.jpg" alt="Cash App bill split" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
+          <img src="img/cashapp-cover.jpg" alt="Cash App bill split" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
           <span class="cover-label">Cash App · Hack Week</span>
         </div>
         <p class="card-meta">11 · Hack Week · Block</p>
@@ -1167,6 +1283,66 @@
           <a href="mailto:orianevanloo@gmail.com" class="about-link">orianevanloo@gmail.com</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══════ HIGHLIGHTS ═══════ -->
+  <section id="highlights">
+    <div class="highlights-header fade-up">
+      <span class="section-eyebrow">What I bring</span>
+      <h2>Built to ship. Designed to last.</h2>
+      <p>12 years of product design across fintech, travel, and AI — here's what that looks like in practice.</p>
+    </div>
+    <div class="highlights-grid">
+
+      <div class="highlight-card fade-up" style="--card-accent:#8B5CF6;">
+        <div class="highlight-icon" style="background:#EDE9FE;">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="highlight-title">AI-native design</p>
+        <p class="highlight-desc">I design for AI-powered products and build AI tools from scratch — custom Claude skills, generative UI variants, prompt-driven workflows. Not AI as a gimmick; AI as a design medium.</p>
+      </div>
+
+      <div class="highlight-card fade-up" style="--card-accent:#F472B6;">
+        <div class="highlight-icon" style="background:#FCE7F3;">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </div>
+        <p class="highlight-title">Design systems</p>
+        <p class="highlight-desc">I build scalable, token-based systems that teams actually use — components, documentation, governance. I led Hitch 2.0, Rome2Rio's cross-platform design system, from the ground up.</p>
+      </div>
+
+      <div class="highlight-card fade-up" style="--card-accent:#34D399;">
+        <div class="highlight-icon" style="background:#D1FAE5;">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </div>
+        <p class="highlight-title">Research-led decisions</p>
+        <p class="highlight-desc">I bring evidence into every room. I design research into the process rather than bolting it on — so by the time we're building, we already know why.</p>
+      </div>
+
+      <div class="highlight-card fade-up" style="--card-accent:#FBBF24;">
+        <div class="highlight-icon" style="background:#FEF3C7;">
+          <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <p class="highlight-title">Rapid prototyping</p>
+        <p class="highlight-desc">From concept to working prototype fast — I've shipped fully functional flows in 24–72 hours. I build to test, not to present, and I know when a Figma file is the wrong tool.</p>
+      </div>
+
+      <div class="highlight-card fade-up" style="--card-accent:#0EA5E9;">
+        <div class="highlight-icon" style="background:#E0F2FE;">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <p class="highlight-title">Shipping at scale</p>
+        <p class="highlight-desc">I've owned design across products used by millions — 15M+ monthly checkout sessions, multi-platform wallet integrations, accessibility uplifts across entire platforms.</p>
+      </div>
+
+      <div class="highlight-card fade-up" style="--card-accent:#F472B6;">
+        <div class="highlight-icon" style="background:#FCE7F3;">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <p class="highlight-title">Cross-functional partnership</p>
+        <p class="highlight-desc">I embed naturally with engineers, PMs and data teams. I ask the questions that unblock the room, and I know how to translate design intent into something a team can actually build.</p>
+      </div>
+
     </div>
   </section>
 
