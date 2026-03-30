@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MYOB Practice · Oriane Van Loo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Oriane<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="project-hero">
+    <div class="hero-inner">
+      <a href="index.html#work" class="back-link">Back to work</a>
+      <p class="project-company">MYOB · 2020–2021</p>
+      <h1 class="project-title">MYOB Practice:<br><em>systematic design</em></h1>
+      <p class="project-lead">Two projects that shaped how I think about scalable, systematic design. The first: a cohesive onboarding framework for accountants migrating their tax clients to a new cloud platform. The second: a research sprint and prototype series for custom charts of accounts, grounded in real user needs before a single production line was written.</p>
+      <div class="project-tags">
+        <span class="project-tag">Onboarding</span>
+        <span class="project-tag">Systems Design</span>
+        <span class="project-tag">User Research</span>
+        <span class="project-tag">Prototyping</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="case-body">
+
+    <div class="role-strip">
+      <div class="role-cell">
+        <p class="role-cell-label">My role</p>
+        <p class="role-cell-value">Sole designer</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Company</p>
+        <p class="role-cell-value">MYOB</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Timeline</p>
+        <p class="role-cell-value">2020–2021</p>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <h2>The platform at a glance</h2>
+      <p>MYOB Practice was at early release stage when I joined, with compliance features live and a full rollout planned within a year. The platform contained distinct modules, some gated by subscription tier, operating largely in silos. Tens of thousands of Australian accountants were about to migrate their tax clients from legacy desktop software to the cloud, many for the very first time.</p>
+      <p>Onboarding was inexistent. There was no connecting tissue between modules, no guidance for new practice managers, and no way to differentiate what users needed based on their role or entry point. My job was to change that, systematically.</p>
+    </section>
+
+    <!-- ══ PROJECT 1: ONBOARDING FRAMEWORK ══ -->
+
+    <section class="case-section">
+      <h2>Project 1: Onboarding framework</h2>
+      <p>The brief was to create a scalable onboarding experience, starting with the most urgent cohort: Australian MYOB software users migrating their tax clients for End of Financial Year 2021. The solution needed to work for this group immediately and extend to all new users over time.</p>
+      <p>Through discovery research and stakeholder workshops, I identified three core user goals that onboarding needed to serve across all roles: find your way around the platform, lodge compliance online, and get your modules set up. These became the structural pillars of the framework.</p>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/myob-onboarding.jpg" alt="MYOB Practice Partner Pathways: setup and onboarding flow for all user types" onerror="this.style.display='none'">
+      <figcaption>Partner Pathways onboarding framework: three parallel tracks (Learning, Setup, PM Admin) mapped to user goals, with contextual entry points for each module area.</figcaption>
+    </figure>
+
+    <section class="case-section">
+      <h2>How I built it</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <strong>Discovery and user research</strong>
+            <span>Ran interviews with accountants and practice managers to map their mental models of onboarding, their biggest blockers when starting on a new platform, and the tasks they most urgently needed to complete in year one.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <strong>Framework definition</strong>
+            <span>Distilled research into a modular framework organised around user goals rather than product features. Each track (Learning, Setup, PM Admin) mapped to a distinct user need, so the framework could scale as new modules shipped without requiring a redesign.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <strong>Contextual triggers and progressive disclosure</strong>
+            <span>Designed onboarding to surface at the right moment: on first access of each module, not as a one-time splash screen. Used progressive disclosure to avoid overwhelming new users while surfacing deeper guidance when they were ready for it.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <strong>Validation and iteration</strong>
+            <span>Tested flows with accountants from the target migration cohort. Iterated on task sequencing, language (accounting-specific rather than generic product copy), and the visual balance between guidance and working content.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ PROJECT 2: CUSTOM CHARTS OF ACCOUNTS ══ -->
+
+    <section class="case-section">
+      <h2>Project 2: Custom charts of accounts</h2>
+      <p>Accountants using MYOB Practice can optionally use charts of accounts specific to their clients. MYOB needed a way to accommodate all types, including custom charts built outside the standard system. Before committing to any solution, the brief was to research appetite and run a design sprint to validate direction.</p>
+      <p>From the initial sprint, two decisions were made: send a survey to understand how many practices had created custom charts and how they used them, then design and test three prototypes with users recruited from survey respondents who expressed interest.</p>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/myob-screens.jpg" alt="MYOB Practice: custom chart of accounts upload, classification, and contacts screens" onerror="this.style.display='none'">
+      <figcaption>Custom charts of accounts: uploading client files, classifying accounts against the standard chart, and the resulting contacts view on successful migration.</figcaption>
+    </figure>
+
+    <section class="case-section">
+      <h2>Three prototypes, one decision</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">A</div>
+          <div class="step-content">
+            <strong>Template for a group</strong>
+            <span>Create a custom chart template at the practice level and apply it to a group of clients. Best for practices with a consistent client base using a single industry-specific chart.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">B</div>
+          <div class="step-content">
+            <strong>Account mapping on import</strong>
+            <span>When uploading a client file, map accounts from the client's custom chart to the MYOB standard at import time. Targeted at practices with varied client charts who need per-client control.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">C</div>
+          <div class="step-content">
+            <strong>Report-time editing</strong>
+            <span>Edit chart classification at the point of creating a report, with the ability to save and reuse modified report templates. Most flexible, best suited to practices with complex or frequently changing chart structures.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pull-quote">
+      <p>"The best systematic design isn't about building everything at once. It's about building the right connective tissue so the product can grow without fracturing."</p>
+    </div>
+
+    <section class="case-section">
+      <h2>What these projects gave me</h2>
+      <p>MYOB was formative. Working on a platform mid-launch, with real users migrating real client data under EOFY deadline pressure, taught me how to design for high-stakes contexts where mistakes have financial consequences. It also taught me the discipline of building frameworks first, features second.</p>
+      <p>The onboarding framework had to work for accountants who had never used cloud software before and for experienced operators who just needed to find things fast. Designing that range into a single coherent system, without either group feeling patronised or lost, is a challenge I still draw on.</p>
+    </section>
+
+    <section class="case-section">
+      <h2>Outcomes</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-cell">
+          <span class="outcome-num">1</span>
+          <span class="outcome-label">Scalable onboarding framework shipped for EOFY 2021 migration cohort</span>
+        </div>
+        <div class="outcome-cell">
+          <span class="outcome-num">3</span>
+          <span class="outcome-label">Chart of accounts prototypes tested with survey-recruited users</span>
+        </div>
+        <div class="outcome-cell">
+          <span class="outcome-num">↑</span>
+          <span class="outcome-label">Framework extended to additional modules as the platform rolled out</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="next-project">
+    <div>
+      <p class="next-label">Next project</p>
+      <a href="project-optus.html" class="next-title">Optus Perks platform →</a>
+    </div>
+    <a href="index.html#work" class="back-to-all">← All work</a>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo">Oriane Van Loo</a>
+      <p class="footer-copy">Product designer. Melbourne.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
