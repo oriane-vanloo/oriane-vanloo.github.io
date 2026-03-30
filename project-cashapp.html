@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash App Bill Split. Oriane Van Loo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Oriane<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="project-hero">
+    <div class="hero-inner">
+      <a href="index.html#work" class="back-link">Back to work</a>
+      <p class="project-company">Block · Cash App · Hack Week</p>
+      <h1 class="project-title">Cash App<br><em>Bill Split</em></h1>
+      <p class="project-lead">Designed a fully functioning bill-splitting flow for Cash App in 3 days. Integrating Square's POS systems to let users split purchases directly in-app — no Splitwise, no Venmo, no manual maths.</p>
+      <div class="project-tags">
+        <span class="project-tag">Product Design</span>
+        <span class="project-tag">Rapid Prototyping</span>
+        <span class="project-tag">Payments</span>
+        <span class="project-tag">Fintech</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="case-body">
+
+    <div class="role-strip">
+      <div class="role-cell">
+        <p class="role-cell-label">My role</p>
+        <p class="role-cell-value">Solo designer</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Format</p>
+        <p class="role-cell-value">Hack Week · 3 days</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Result</p>
+        <p class="role-cell-value">Added to product pipeline by Head of Design</p>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <h2>The problem with splitting bills</h2>
+      <p>Splitting a bill with friends is one of those everyday frictions that nobody has properly solved. You pay, then you chase. Or everyone installs Splitwise. Or someone just eats the cost. The awkwardness is social as much as it is technical.</p>
+      <p>Cash App already had the peer-to-peer payment infrastructure. Square already had the merchant POS. The opportunity was obvious: if someone pays with Cash App at a Square terminal, why not let them split that bill with friends right there in the app, without leaving it?</p>
+    </section>
+
+    <section class="case-section">
+      <h2>The solution</h2>
+      <p>A native bill-splitting flow integrated directly into the Cash App post-purchase experience. After paying via the Square POS integration, users can select contacts, split by amount or by item, review the split, and send requests — all without leaving Cash App or switching to a third-party app.</p>
+      <p>The design focused on three things: making the contact selection fast (leveraging existing Cash App contacts), making the split calculation transparent (users see exactly what everyone owes and what they're getting back), and keeping the completion moment satisfying.</p>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/cashapp-flow.jpg" alt="Full bill-splitting user flow across multiple screens and split paths">
+      <figcaption>The complete flow: from post-purchase trigger through contact selection, split method, review, and confirmation. Multiple split paths (equal, by item, by amount) mapped end to end.</figcaption>
+    </figure>
+
+    <section class="case-section">
+      <h2>How it came together</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <strong>Audited existing solutions</strong>
+            <span>Reviewed how Venmo, Splitwise and other tools handle splitting. Identified where they create friction: app-switching, manual entry, delayed resolution. Used this to define what "better" looked like natively in Cash App.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <strong>Mapped the POS integration entry point</strong>
+            <span>Defined the trigger: the post-purchase moment when a Cash App user pays at a Square terminal. From there, mapped all downstream states: solo purchase, split between 2, split between many, item-level splits.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <strong>Designed the full flow</strong>
+            <span>Worked with a remote engineering team in Canada to design and prototype the end-to-end experience across all split variations. Every edge case accounted for — adding someone mid-split, adjusting amounts, handling non-Cash App contacts.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <strong>Delivered a working prototype in 3 days</strong>
+            <span>Presented a fully functioning interactive prototype. Not a concept deck — a testable flow the engineering team could immediately evaluate for technical feasibility and the product team could use to pitch to stakeholders.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/cashapp-screens.jpg" alt="Contact selection and review amounts screens side by side">
+      <figcaption>Contact selection with fast-access avatars, and the split summary showing what each person owes and what you're getting back.</figcaption>
+    </figure>
+
+    <div class="pull-quote">
+      <p>"Every user who adopts the feature is likely to bring in more users — a network effect that strengthens both Cash App and the Square merchant ecosystem."</p>
+    </div>
+
+    <section class="case-section">
+      <h2>Why this matters beyond the feature</h2>
+      <p>The business case was layered. A native bill-splitting feature isn't just a convenience improvement — it's a growth mechanism. Each split request sent to a non-Cash App contact is an organic acquisition prompt. Each Square merchant who enables the POS integration sees more Cash App transactions.</p>
+      <p>The feature creates a closed loop: Square merchants benefit from higher Cash App adoption among their customers, and Cash App users benefit from more merchants accepting it. Building it into the post-purchase moment — rather than as a standalone tool — is what makes the network effect viable.</p>
+    </section>
+
+    <section class="case-section">
+      <h2>Outcomes</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-cell">
+          <span class="outcome-num">3 days</span>
+          <span class="outcome-label">From brief to fully functioning end-to-end prototype</span>
+        </div>
+        <div class="outcome-cell">
+          <span class="outcome-num">→</span>
+          <span class="outcome-label">Head of Design reached out to add the project to the product pipeline</span>
+        </div>
+        <div class="outcome-cell">
+          <span class="outcome-num">✓</span>
+          <span class="outcome-label">First Hack Week project — delivered remotely with engineers across timezones</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="next-project">
+    <div>
+      <p class="next-label">Next project</p>
+      <a href="project-ai-coach.html" class="next-title">AI Business Coach →</a>
+    </div>
+    <a href="index.html#work" class="back-to-all">← All work</a>
+  </div>
+
+</body>
+</html>
