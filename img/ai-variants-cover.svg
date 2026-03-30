@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E1065"/>
+      <stop offset="55%" stop-color="#4C1D95"/>
+      <stop offset="100%" stop-color="#5B21B6"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1040"/>
+      <stop offset="100%" stop-color="#2D1B69"/>
+    </linearGradient>
+    <linearGradient id="claudeOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8C42"/>
+      <stop offset="100%" stop-color="#E86E2C"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Hard shadow filter for playful style -->
+    <filter id="hardShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="4" dy="4" stdDeviation="0" flood-color="#1E293B" flood-opacity="1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Subtle dot grid -->
+  <pattern id="dots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1.2" fill="rgba(255,255,255,0.06)"/>
+  </pattern>
+  <rect width="800" height="450" fill="url(#dots)"/>
+
+  <!-- Floating UI component ghost cards (background decoration) -->
+  <!-- Card 1 -->
+  <rect x="30" y="60" width="110" height="72" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <rect x="44" y="76" width="60" height="8" rx="4" fill="rgba(244,114,182,0.5)"/>
+  <rect x="44" y="92" width="80" height="5" rx="2.5" fill="rgba(255,255,255,0.2)"/>
+  <rect x="44" y="103" width="65" height="5" rx="2.5" fill="rgba(255,255,255,0.15)"/>
+  <rect x="44" y="116" width="48" height="8" rx="4" fill="rgba(139,92,246,0.6)"/>
+
+  <!-- Card 2 (variant) -->
+  <rect x="30" y="154" width="110" height="72" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(244,114,182,0.3)" stroke-width="1.5"/>
+  <rect x="44" y="170" width="60" height="8" rx="4" fill="rgba(251,191,36,0.6)"/>
+  <rect x="44" y="186" width="80" height="5" rx="2.5" fill="rgba(255,255,255,0.2)"/>
+  <rect x="44" y="197" width="65" height="5" rx="2.5" fill="rgba(255,255,255,0.15)"/>
+  <rect x="44" y="210" width="48" height="8" rx="4" fill="rgba(52,211,153,0.6)"/>
+
+  <!-- Card 3 (variant) -->
+  <rect x="30" y="248" width="110" height="72" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(52,211,153,0.3)" stroke-width="1.5"/>
+  <rect x="44" y="264" width="60" height="8" rx="4" fill="rgba(139,92,246,0.7)"/>
+  <rect x="44" y="280" width="80" height="5" rx="2.5" fill="rgba(255,255,255,0.2)"/>
+  <rect x="44" y="291" width="65" height="5" rx="2.5" fill="rgba(255,255,255,0.15)"/>
+  <rect x="44" y="304" width="48" height="8" rx="4" fill="rgba(244,114,182,0.6)"/>
+
+  <!-- Arrow indicating generation -->
+  <text x="158" y="200" font-size="22" fill="rgba(251,191,36,0.7)" font-family="sans-serif">→</text>
+
+  <!-- Designer desk / laptop body -->
+  <!-- Laptop base -->
+  <rect x="265" y="295" width="270" height="18" rx="5" fill="#1A0F3C" stroke="#1E293B" stroke-width="3"/>
+  <rect x="255" y="313" width="290" height="8" rx="4" fill="#120B2E" stroke="#1E293B" stroke-width="3"/>
+
+  <!-- Laptop screen frame -->
+  <rect x="280" y="175" width="240" height="125" rx="8" fill="#120B2E" stroke="#1E293B" stroke-width="4"/>
+
+  <!-- Screen content -->
+  <rect x="288" y="183" width="224" height="109" rx="4" fill="url(#screenGrad)"/>
+
+  <!-- Screen: Figma-like UI with variants being generated -->
+  <rect x="296" y="191" width="60" height="44" rx="6" fill="rgba(244,114,182,0.25)" stroke="rgba(244,114,182,0.5)" stroke-width="1.5"/>
+  <rect x="303" y="199" width="40" height="5" rx="2" fill="rgba(244,114,182,0.7)"/>
+  <rect x="303" y="208" width="32" height="3" rx="1.5" fill="rgba(255,255,255,0.3)"/>
+  <rect x="303" y="215" width="38" height="3" rx="1.5" fill="rgba(255,255,255,0.2)"/>
+  <rect x="303" y="224" width="24" height="6" rx="3" fill="rgba(139,92,246,0.7)"/>
+
+  <rect x="364" y="191" width="60" height="44" rx="6" fill="rgba(139,92,246,0.25)" stroke="rgba(139,92,246,0.5)" stroke-width="1.5"/>
+  <rect x="371" y="199" width="40" height="5" rx="2" fill="rgba(139,92,246,0.7)"/>
+  <rect x="371" y="208" width="32" height="3" rx="1.5" fill="rgba(255,255,255,0.3)"/>
+  <rect x="371" y="215" width="38" height="3" rx="1.5" fill="rgba(255,255,255,0.2)"/>
+  <rect x="371" y="224" width="24" height="6" rx="3" fill="rgba(52,211,153,0.7)"/>
+
+  <rect x="432" y="191" width="60" height="44" rx="6" fill="rgba(52,211,153,0.25)" stroke="rgba(52,211,153,0.5)" stroke-width="1.5"/>
+  <rect x="439" y="199" width="40" height="5" rx="2" fill="rgba(52,211,153,0.7)"/>
+  <rect x="439" y="208" width="32" height="3" rx="1.5" fill="rgba(255,255,255,0.3)"/>
+  <rect x="439" y="215" width="38" height="3" rx="1.5" fill="rgba(255,255,255,0.2)"/>
+  <rect x="439" y="224" width="24" height="6" rx="3" fill="rgba(251,191,36,0.7)"/>
+
+  <!-- Screen bottom bar -->
+  <rect x="296" y="243" width="208" height="3" rx="1.5" fill="rgba(255,255,255,0.08)"/>
+  <rect x="296" y="252" width="130" height="3" rx="1.5" fill="rgba(255,255,255,0.05)"/>
+  <rect x="296" y="261" width="170" height="3" rx="1.5" fill="rgba(255,255,255,0.05)"/>
+  <rect x="296" y="272" width="90" height="10" rx="5" fill="rgba(244,114,182,0.4)"/>
+  <rect x="393" y="272" width="60" height="10" rx="5" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- Desk surface line -->
+  <rect x="180" y="320" width="440" height="3" rx="1.5" fill="rgba(255,255,255,0.08)"/>
+
+  <!-- ═══ DESIGNER FIGURE ═══ -->
+  <!-- Body / torso -->
+  <path d="M370 240 Q370 230 400 228 Q430 230 430 240 L438 295 L362 295 Z" fill="#6D28D9" stroke="#1E293B" stroke-width="3"/>
+
+  <!-- Arms -->
+  <!-- Left arm reaching to laptop -->
+  <path d="M370 255 Q340 268 320 285" stroke="#5B21B6" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <path d="M370 255 Q340 268 320 285" stroke="#7C3AED" stroke-width="11" stroke-linecap="round" fill="none"/>
+  <!-- Right arm -->
+  <path d="M430 255 Q460 268 480 285" stroke="#5B21B6" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <path d="M430 255 Q460 268 480 285" stroke="#7C3AED" stroke-width="11" stroke-linecap="round" fill="none"/>
+
+  <!-- Hands -->
+  <circle cx="318" cy="287" r="9" fill="#7C3AED" stroke="#1E293B" stroke-width="2.5"/>
+  <circle cx="482" cy="287" r="9" fill="#7C3AED" stroke="#1E293B" stroke-width="2.5"/>
+
+  <!-- Neck -->
+  <rect x="392" y="210" width="16" height="22" rx="7" fill="#5B21B6" stroke="#1E293B" stroke-width="2.5"/>
+
+  <!-- ═══ CLAUDE LOGO HEAD ═══ -->
+  <!-- Outer glow halo -->
+  <circle cx="400" cy="175" r="46" fill="rgba(255,140,66,0.12)"/>
+
+  <!-- Head circle background -->
+  <circle cx="400" cy="175" r="38" fill="#FF8C42" stroke="#1E293B" stroke-width="4" filter="url(#softGlow)"/>
+  <circle cx="400" cy="175" r="38" fill="#F97316" stroke="#1E293B" stroke-width="4"/>
+
+  <!-- Claude logo mark — the distinctive spiral/asterisk -->
+  <!-- This is Claude's characteristic logo: curved petals/spokes rotating from center -->
+  <g transform="translate(400,175)" filter="url(#glow)">
+    <!-- 6 curved petal shapes forming the Claude asterisk logo -->
+    <path d="M0,-22 C6,-18 10,-8 8,0 C10,8 6,18 0,22 C-2,14 -3,7 -3,0 C-3,-7 -2,-14 0,-22Z" fill="rgba(255,255,255,0.92)" transform="rotate(0)"/>
+    <path d="M0,-22 C6,-18 10,-8 8,0 C10,8 6,18 0,22 C-2,14 -3,7 -3,0 C-3,-7 -2,-14 0,-22Z" fill="rgba(255,255,255,0.92)" transform="rotate(60)"/>
+    <path d="M0,-22 C6,-18 10,-8 8,0 C10,8 6,18 0,22 C-2,14 -3,7 -3,0 C-3,-7 -2,-14 0,-22Z" fill="rgba(255,255,255,0.92)" transform="rotate(120)"/>
+    <path d="M0,-22 C6,-18 10,-8 8,0 C10,8 6,18 0,22 C-2,14 -3,7 -3,0 C-3,-7 -2,-14 0,-22Z" fill="rgba(255,255,255,0.92)" transform="rotate(180)"/>
+    <path d="M0,-22 C6,-18 10,-8 8,0 C10,8 6,18 0,22 C-2,14 -3,7 -3,0 C-3,-7 -2,-14 0,-22Z" fill="rgba(255,255,255,0.92)" transform="rotate(240)"/>
+    <path d="M0,-22 C6,-18 10,-8 8,0 C10,8 6,18 0,22 C-2,14 -3,7 -3,0 C-3,-7 -2,-14 0,-22Z" fill="rgba(255,255,255,0.92)" transform="rotate(300)"/>
+    <!-- Small center dot -->
+    <circle r="5" fill="rgba(255,255,255,0.6)"/>
+  </g>
+
+  <!-- Sparkle accents around the head -->
+  <text x="358" y="138" font-size="14" fill="#FBBF24" font-family="sans-serif" filter="url(#glow)">✦</text>
+  <text x="432" y="132" font-size="10" fill="#F472B6" font-family="sans-serif" filter="url(#glow)">✦</text>
+  <text x="445" y="155" font-size="8" fill="#34D399" font-family="sans-serif">✦</text>
+
+  <!-- ═══ RIGHT SIDE: generated variants output ═══ -->
+  <!-- Output cards appearing on the right, as if AI is generating them -->
+  <rect x="572" y="140" width="115" height="78" rx="10" fill="rgba(255,255,255,0.08)" stroke="rgba(244,114,182,0.4)" stroke-width="1.5"/>
+  <rect x="582" y="152" width="55" height="7" rx="3" fill="rgba(244,114,182,0.7)"/>
+  <rect x="582" y="165" width="80" height="4" rx="2" fill="rgba(255,255,255,0.25)"/>
+  <rect x="582" y="174" width="65" height="4" rx="2" fill="rgba(255,255,255,0.18)"/>
+  <rect x="582" y="189" width="42" height="14" rx="7" fill="rgba(244,114,182,0.6)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <rect x="572" y="232" width="115" height="78" rx="10" fill="rgba(255,255,255,0.08)" stroke="rgba(251,191,36,0.4)" stroke-width="1.5"/>
+  <rect x="582" y="244" width="55" height="7" rx="3" fill="rgba(251,191,36,0.7)"/>
+  <rect x="582" y="257" width="80" height="4" rx="2" fill="rgba(255,255,255,0.25)"/>
+  <rect x="582" y="266" width="65" height="4" rx="2" fill="rgba(255,255,255,0.18)"/>
+  <rect x="582" y="281" width="42" height="14" rx="7" fill="rgba(251,191,36,0.6)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <rect x="572" y="324" width="115" height="78" rx="10" fill="rgba(255,255,255,0.08)" stroke="rgba(52,211,153,0.4)" stroke-width="1.5"/>
+  <rect x="582" y="336" width="55" height="7" rx="3" fill="rgba(52,211,153,0.7)"/>
+  <rect x="582" y="349" width="80" height="4" rx="2" fill="rgba(255,255,255,0.25)"/>
+  <rect x="582" y="358" width="65" height="4" rx="2" fill="rgba(255,255,255,0.18)"/>
+  <rect x="582" y="373" width="42" height="14" rx="7" fill="rgba(52,211,153,0.6)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- Connecting dots (AI generating) -->
+  <line x1="540" y1="180" x2="570" y2="180" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="540" y1="271" x2="570" y2="271" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="540" y1="363" x2="570" y2="363" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Sticker badge -->
+  <rect x="540" y="50" width="152" height="36" rx="18" fill="#FBBF24" stroke="#1E293B" stroke-width="3" filter="url(#hardShadow)"/>
+  <text x="616" y="73" font-size="13" font-weight="800" font-family="'Plus Jakarta Sans', sans-serif" text-anchor="middle" fill="#1E293B">AI-generated ✦</text>
+
+  <!-- "×10 faster" badge -->
+  <rect x="160" y="340" width="110" height="36" rx="18" fill="#F472B6" stroke="#1E293B" stroke-width="3" filter="url(#hardShadow)"/>
+  <text x="215" y="363" font-size="13" font-weight="800" font-family="'Plus Jakarta Sans', sans-serif" text-anchor="middle" fill="white">10× faster ↗</text>
+</svg>

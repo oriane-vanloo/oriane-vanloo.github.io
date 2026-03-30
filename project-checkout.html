@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afterpay Checkout Redesign. Oriane Van Loo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <nav>
+    <a href="index-playful.html" class="nav-logo">Oriane Van Loo</a>
+    <ul class="nav-links">
+      <li><a href="index-playful.html#work">Work</a></li>
+      <li><a href="index-playful.html#about">About</a></li>
+      <li><a href="index-playful.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="project-hero">
+    <div class="hero-inner">
+      <a href="index-playful.html#work" class="back-link">Back to work</a>
+      <p class="project-company">Afterpay · Block Inc · 2022–2025</p>
+      <h1 class="project-title">Afterpay Checkout<br><em>Flow Redesign</em></h1>
+      <p class="project-lead">A complete overhaul of Afterpay's checkout. the most critical moment in the purchase flow, handling 15M+ sessions every month across six global markets.</p>
+      <div class="project-tags">
+        <span class="project-tag">Product Design</span>
+        <span class="project-tag">Interaction Design</span>
+        <span class="project-tag">Systems Design</span>
+        <span class="project-tag">Research</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="case-body">
+
+    <div class="role-strip">
+      <div class="role-cell">
+        <p class="role-cell-label">My role</p>
+        <p class="role-cell-value">Sole product designer</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Team</p>
+        <p class="role-cell-value">PM, 6 engineers, risk &amp; compliance</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Duration</p>
+        <p class="role-cell-value">3 years, iterative releases</p>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <h2>The challenge</h2>
+      <p>Afterpay's checkout had grown organically across years and markets. By the time I inherited it, the UI was cluttered with a legacy profile section that wasted space, payment information that lacked visual priority, and multiple competing legal disclaimers that buried the confirm action. Customers were confused at exactly the moment they needed to feel confident.</p>
+      <p>At the same time, the business was accelerating fast: new payment plans, new markets, new payment methods. The existing design couldn't scale without breaking. Every new feature required fragile one-off solutions.</p>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/checkout-redesign.jpg" alt="Afterpay checkout before and after redesign. cleaner layout, clearer hierarchy, stronger brand alignment">
+      <figcaption>Before and after: from cluttered legacy UI to a clear, modular checkout</figcaption>
+    </figure>
+
+    <section class="case-section">
+      <h2>What I did</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <strong>Diagnosed the problem through data</strong>
+            <span>Reviewed session recordings, drop-off data and support ticket themes to identify where and why customers were losing confidence or abandoning. The profile section, payment schedule clarity and error states stood out as consistent friction points.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <strong>Defined a new information architecture</strong>
+            <span>Restructured the page around three clear jobs: understand the merchant context, choose your payment method, and confirm. Removing the legacy profile section immediately freed up visual space and reduced cognitive load.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <strong>Built a modular component system</strong>
+            <span>Designed expandable sections for payment plan selection, payment method and order summary. each able to flex independently. This allowed the checkout to support Afterpay's four payment plans and multiple card types without requiring a redesign for each combination.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <strong>Overhauled error handling and trust signals</strong>
+            <span>Rewrote all error states with plain, specific language (no generic "something went wrong") and clear recovery actions. Consolidated three separate legal disclaimer sections into a single, well-placed line at the point of confirmation.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <strong>Validated across markets and edge cases</strong>
+            <span>Ran usability testing in AU, US and UK. Worked closely with risk and compliance teams to ensure every legal requirement was met without cluttering the UI. Documented hundreds of states, edge cases and component variants for engineering.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/checkout-anatomy.jpg" alt="Checkout component anatomy and spacing documentation">
+    </figure>
+
+
+
+    <section class="case-section">
+      <h2>Key design decisions</h2>
+      <p><strong>Merchant branding at the top.</strong> Replacing the generic profile section with the merchant's logo immediately oriented customers: they knew where they were and who they were buying from. This single change visually anchored the whole flow.</p>
+      <p><strong>Receipt-style summary near the CTA.</strong> Moving the order summary directly above the confirm button kept the key numbers (total and amount due today) visible at the moment of decision, reducing confusion and the need to scroll.</p>
+      <p><strong>Modular sectioning for flexibility.</strong> Each section expands independently, which made it possible to introduce new payment plans and methods without a full redesign. a critical requirement for a product iterating this fast across markets.</p>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/checkout-flows.jpg" alt="Multiple checkout flow variations across payment methods and plans">
+      <figcaption>The redesigned checkout across different payment plans, methods and market configurations</figcaption>
+    </figure>
+
+    <div class="pull-quote">
+      <p>"At the point of purchase, clarity is the product. Every element either builds confidence or erodes it."</p>
+    </div>
+
+    <section class="case-section">
+      <h2>Outcomes</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-cell">
+          <span class="outcome-num">15M+</span>
+          <span class="outcome-label">Sessions per month handled by the redesigned flow</span>
+        </div>
+        <div class="outcome-cell">
+          <span class="outcome-num">6</span>
+          <span class="outcome-label">Global markets supported without market-specific redesigns</span>
+        </div>
+        <div class="outcome-cell">
+          <span class="outcome-num">4</span>
+          <span class="outcome-label">Payment plans supported within the same modular layout</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="next-project">
+    <div>
+      <p class="next-label">Next project</p>
+      <a href="project-express.html" class="next-title">Afterpay Express Checkout →</a>
+    </div>
+    <a href="index-playful.html#work" class="back-to-all">← All work</a>
+  </div>
+
+</body>
+</html>

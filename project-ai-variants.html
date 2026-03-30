@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-powered design variants · Oriane Van Loo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <nav>
+    <a href="index-playful.html" class="nav-logo">Oriane Van Loo</a>
+    <ul class="nav-links">
+      <li><a href="index-playful.html#work">Work</a></li>
+      <li><a href="index-playful.html#about">About</a></li>
+      <li><a href="index-playful.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="project-hero">
+    <div class="hero-inner">
+      <a href="index-playful.html#work" class="back-link">Back to work</a>
+      <p class="project-company">Rome2Rio · 2025–Present</p>
+      <h1 class="project-title">AI-Powered<br><em>Design Variants</em></h1>
+      <p class="project-lead">Reusable, prompt-driven design tools built on top of Claude Code and OpenAI Codex. Connected to our Hitch design system via Figma MCP and Storybook, the tools generate UI variants that are automatically fitted to Rome2Rio's actual components, removing the guesswork from the exploration phase.</p>
+      <div class="project-tags">
+        <span class="project-tag">AI Design</span>
+        <span class="project-tag">Design Process</span>
+        <span class="project-tag">Tooling</span>
+        <span class="project-tag">Design Ops</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="case-body">
+
+    <div class="role-strip">
+      <div class="role-cell">
+        <p class="role-cell-label">My role</p>
+        <p class="role-cell-value">Designer + tool builder</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Tools</p>
+        <p class="role-cell-value">Claude Code, Figma, custom skills</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Impact</p>
+        <p class="role-cell-value">Minutes vs. days for early exploration</p>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <h2>The problem with design exploration</h2>
+      <p>Early-stage design exploration is time-consuming in ways that don't add value. When a team wants to explore three different directions for a UI pattern, the expensive part isn't the thinking. it's the execution: opening Figma, building each variant from scratch, making them all look presentable enough to evaluate and compare.</p>
+      <p>At Rome2Rio, the design team is small. Time spent on low-value execution is time not spent on decisions, craft and the problems only designers can solve. I wanted to change that ratio.</p>
+    </section>
+
+    <section class="case-section">
+      <h2>What I built (using Claude Code and Codex)</h2>
+      <p>Custom AI skills. reusable, prompt-driven tools built on top of Claude Code. that generate multiple fully-rendered interactive UI variants from a written design brief. A designer writes what they're exploring and why, and gets back a set of working, comparable variants in the browser within minutes.</p>
+      <p>The variants are not static images. They're interactive HTML/CSS components, built to Hitch 2.0 design system standards. real enough to evaluate interaction behaviour, not just appearance.</p>
+      <div class="process-steps" style="margin-top:1.5rem">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <strong>Brief input</strong>
+            <span>The designer writes a brief: component type, user goal, design constraints, and which directions they want to explore. Plain language. no code required.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <strong>Variant generation</strong>
+            <span>The AI skill generates multiple distinct variants. each with a different design rationale. rendered as interactive components in the Hitch 2.0 visual language.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <strong>Side-by-side comparison</strong>
+            <span>Variants are presented in a notebook format: each direction visible alongside its rationale and trade-offs, making it fast to review, discuss and decide.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <strong>Iteration</strong>
+            <span>The designer can request refinements to any variant, push in a new direction, or combine elements from multiple. all through natural language, without touching code.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pull-quote">
+      <p>"The goal was never to replace design thinking. It was to remove the cost of acting on it."</p>
+    </div>
+
+    <section class="case-section">
+      <h2>Why this is a design process innovation</h2>
+      <p>Traditional design tools are great at executing decisions. They're not optimised for generating options cheaply. AI changes that ratio. but only if the prompting layer is thoughtful enough to produce outputs worth evaluating.</p>
+      <p>The skill I built (using Claude Code and Codex) encodes design system knowledge, component constraints and the Hitch brand into the generation process. The result is variants that are already on-brand and realistic, not generic AI outputs that need extensive cleanup. The design team gets real creative exploration, not a starting point that needs as much work as building from scratch.</p>
+      <p>This project also represents a broader shift in how I think about my role as a principal designer: not just making better products, but building better ways for the team to make products.</p>
+    </section>
+
+    <section class="case-section">
+      <h2>Outcomes</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-cell">
+          <span class="outcome-num">mins</span>
+          <span class="outcome-label">To generate multiple interactive variants. previously took days</span>
+        </div>
+        <div class="outcome-cell">
+          <span class="outcome-num">3–5×</span>
+          <span class="outcome-label">More design directions explored per feature during early ideation</span>
+        </div>
+        <div class="outcome-cell">
+          <span class="outcome-num">→</span>
+          <span class="outcome-label">Adopted across the Rome2Rio design team as a standard exploration tool</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="next-project">
+    <div>
+      <p class="next-label">Back to start</p>
+      <a href="project-checkout.html" class="next-title">Afterpay Checkout Redesign →</a>
+    </div>
+    <a href="index-playful.html#work" class="back-to-all">← All work</a>
+  </div>
+</body>
+</html>

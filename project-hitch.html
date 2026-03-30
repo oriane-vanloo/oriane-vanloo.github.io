@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitch 2.0 design system · Oriane Van Loo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <nav>
+    <a href="index-playful.html" class="nav-logo">Oriane Van Loo</a>
+    <ul class="nav-links">
+      <li><a href="index-playful.html#work">Work</a></li>
+      <li><a href="index-playful.html#about">About</a></li>
+      <li><a href="index-playful.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="project-hero">
+    <div class="hero-inner">
+      <a href="index-playful.html#work" class="back-link">Back to work</a>
+      <p class="project-company">Rome2Rio · 2024</p>
+      <h1 class="project-title">Hitch 2.0<br><em>design system</em></h1>
+      <p class="project-lead">Hitch 2.0 is the second version of Rome2Rio's design system, not the first. I expanded the core component library, added more atoms and icons, cleaned up the token architecture, and streamlined adoption across two dev stacks that the product had accumulated. Parts of this work were done with AI assistance, helping speed up token auditing and component documentation.</p>
+      <div class="project-tags">
+        <span class="project-tag">Design Systems</span>
+        <span class="project-tag">Component Design</span>
+        <span class="project-tag">Design Ops</span>
+        <span class="project-tag">Tokens</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="case-body">
+
+    <div class="role-strip">
+      <div class="role-cell">
+        <p class="role-cell-label">My role</p>
+        <p class="role-cell-value">Design system lead. sole designer</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Team</p>
+        <p class="role-cell-value">Engineering, product, brand</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Output</p>
+        <p class="role-cell-value">Full token system + component library</p>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <h2>Context</h2>
+      <p>When I joined Rome2Rio, the product had two separate dev stacks that had grown apart over time. Hitch 1.0 existed but had gaps: limited component coverage, inconsistent token usage, and no clear adoption path for engineers working across the two stacks. Hitch 2.0 was about fixing that.</p>
+      <p>The goal was to expand what existed, clean it up properly, and make it genuinely usable by both design and engineering, with a clear path to consolidate the stacks over time. AI tooling (Claude and Codex) helped speed up the more repetitive parts: token auditing, naming convention passes, and draft documentation.</p>
+    </section>
+
+    <section class="case-section">
+      <h2>What I built</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <strong>Token foundation</strong>
+            <span>Defined the primitive and semantic token layers for colour, typography, spacing, border radius and elevation. Semantic tokens (e.g. <code>color.action.primary</code>) rather than primitive references (e.g. <code>pink.500</code>) meant design intent was captured in the token itself. making theming and future changes systematic rather than manual.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <strong>Component library</strong>
+            <span>Built a comprehensive component library in Figma covering all primary UI patterns. buttons, inputs, navigation, cards, modals, empty states, loading states. Each component was documented with all variants, states and usage guidance.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <strong>Icon set</strong>
+            <span>Designed and organised the full Hitch icon set. consistent stroke weight, optical sizing, and naming conventions aligned with engineering's asset pipeline.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <strong>Motion principles</strong>
+            <span>Defined the motion language for the product: easing curves, durations, and named transitions for common patterns like page entries, modal reveals and state changes.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <strong>Documentation and adoption</strong>
+            <span>Wrote component usage documentation, ran workshops with engineering to align on token implementation, and maintained the system through the product's first major feature releases.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/hitch-ds-cover.jpg" alt="Hitch 2.0 design system documentation. colour tokens, typography scale and border radius">
+      <figcaption>Hitch 2.0 in Figma: semantic colour and typography tokens, component library, and editorial type scales across light and dark modes.</figcaption>
+    </figure>
+
+    <figure class="case-image">
+      <img src="img/hitch-traveler.jpg" alt="Hitch 2.0 traveler character. the Rome2Rio mascot used across the product">
+      <figcaption>The The Hitch traveler character, used across onboarding, empty states, and key product moments throughout the Rome2Rio app.</figcaption>
+    </figure>
+
+    <div class="pull-quote">
+      <p>"A design system is only as good as its adoption. The goal wasn't a beautiful Figma file. it was a shared way of working."</p>
+    </div>
+
+    <section class="case-section">
+      <h2>Why design systems matter</h2>
+      <p>The value of a design system is compounding. Every component built to spec is a decision that doesn't need to be made again. Every token applied consistently is a change that can be made globally in one place. Every documented pattern is a conversation that doesn't need to happen in a design review.</p>
+      <p>At Rome2Rio, Hitch changed the speed and quality of both design and engineering output. New features could be designed faster because the building blocks existed. Engineering could ship with confidence because the spec was unambiguous.</p>
+    </section>
+
+    <section class="case-section">
+      <h2>Outcomes</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-cell">
+          <span class="outcome-num">1st</span>
+          <span class="outcome-label">Design system Rome2Rio ever had. built from scratch</span>
+        </div>
+        <div class="outcome-cell">
+          <span class="outcome-num">↑</span>
+          <span class="outcome-label">Measurably faster design and engineering velocity after adoption</span>
+        </div>
+        <div class="outcome-cell">
+          <span class="outcome-num">→</span>
+          <span class="outcome-label">Single source of truth adopted across web, iOS and Android</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="next-project">
+    <div>
+      <p class="next-label">Next project</p>
+      <a href="project-map-first.html" class="next-title">Map First Concept →</a>
+    </div>
+    <a href="index-playful.html#work" class="back-to-all">← All work</a>
+  </div>
+</body>
+</html>
