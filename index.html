@@ -675,8 +675,8 @@
     .card-link-button::after { content: ' →'; }
 
     .fit-card {
-      background: var(--fg);
-      color: #fff;
+      background: var(--yellow);
+      color: var(--fg);
       cursor: default;
     }
     .fit-card:hover {
@@ -685,10 +685,10 @@
     }
     .fit-card .card-meta,
     .fit-card .card-desc {
-      color: rgba(255,255,255,0.72);
+      color: var(--fg);
     }
     .fit-card .card-title {
-      color: #fff;
+      color: var(--fg);
     }
     .fit-card .fit-list {
       display: grid;
@@ -701,14 +701,14 @@
       align-items: flex-start;
       font-size: 0.88rem;
       line-height: 1.55;
-      color: rgba(255,255,255,0.76);
+      color: var(--fg);
     }
     .fit-card .fit-dot {
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: var(--yellow);
-      border: 2px solid rgba(255,255,255,0.9);
+      background: var(--fg);
+      border: 2px solid var(--bg);
       flex: 0 0 auto;
       margin-top: 0.35rem;
     }
