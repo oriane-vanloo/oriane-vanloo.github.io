@@ -92,6 +92,7 @@
       color: #fff !important;
       border-color: var(--fg) !important;
       box-shadow: var(--shadow-sm) !important;
+      white-space: nowrap;
     }
     .nav-cta:hover {
       background: #7C3AED !important;
@@ -411,6 +412,64 @@
       max-width: 460px;
     }
 
+    /* ─── SERVICES ─── */
+    #services {
+      background: #FFFFFF;
+      position: relative;
+    }
+    .services-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+    .service-card {
+      background: var(--bg);
+      border: 2px solid var(--fg);
+      border-radius: 18px;
+      padding: 1.6rem;
+      box-shadow: var(--shadow);
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .service-kicker {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 2px solid var(--fg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--yellow);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      box-shadow: var(--shadow-sm);
+    }
+    .service-card:nth-child(2) .service-kicker { background: var(--pink); }
+    .service-card:nth-child(3) .service-kicker { background: var(--mint); }
+    .service-card:nth-child(4) .service-kicker { background: var(--accent); color: #fff; }
+    .service-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--fg);
+    }
+    .service-copy {
+      color: var(--muted-fg);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
     /* ─── WORK ─── */
     #work { background: var(--muted); position: relative; }
 
@@ -595,6 +654,65 @@
     }
     .card-arrow::after { content: '→'; }
 
+    .card-link-button {
+      align-self: flex-start;
+      margin-top: 1.25rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--fg);
+      text-decoration: none;
+      background: var(--yellow);
+      border: 2px solid var(--fg);
+      border-radius: 9999px;
+      padding: 0.55rem 1rem;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      z-index: 3;
+    }
+    .card-link-button::after { content: ' →'; }
+
+    .fit-card {
+      background: var(--fg);
+      color: #fff;
+      cursor: default;
+    }
+    .fit-card:hover {
+      transform: none;
+      box-shadow: var(--shadow);
+    }
+    .fit-card .card-meta,
+    .fit-card .card-desc {
+      color: rgba(255,255,255,0.72);
+    }
+    .fit-card .card-title {
+      color: #fff;
+    }
+    .fit-card .fit-list {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 0.25rem;
+    }
+    .fit-card .fit-line {
+      display: flex;
+      gap: 0.65rem;
+      align-items: flex-start;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.76);
+    }
+    .fit-card .fit-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--yellow);
+      border: 2px solid rgba(255,255,255,0.9);
+      flex: 0 0 auto;
+      margin-top: 0.35rem;
+    }
+
     /* ─── ABOUT ─── */
     #about {
       background: var(--bg);
@@ -712,9 +830,11 @@
     @media (max-width: 900px) {
       #highlights { padding: 4rem 1.5rem; }
       .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 580px) {
       .highlights-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
     }
 
     .about-deco-circle {
@@ -941,17 +1061,26 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
-      nav { padding: 1rem 1.5rem; }
+      nav { padding: 1rem 1.5rem; gap: 0.75rem; }
+      .nav-links { gap: 0.15rem; }
+      .nav-links a { font-size: 0.72rem; padding: 0.35rem 0.5rem; }
       #hero { grid-template-columns: 1fr; padding: 8rem 1.5rem 4rem; }
       .hero-visual { display: none; }
       section { padding: 4rem 1.5rem; }
+      .services-header { align-items: flex-start; }
+      .services-grid { grid-template-columns: 1fr; }
       .work-header { flex-direction: column; }
       .company-cards { grid-template-columns: 1fr !important; }
       .project-card.wide { grid-column: auto; }
       .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-badge { display: none; }
       .form-row { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 0.5rem; }
       .deco-circle-big, .deco-pill, .deco-square, .deco-triangle { display: none; }
+    }
+
+    @media (max-width: 340px) {
+      .nav-links li:not(:last-child) { display: none; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -968,7 +1097,8 @@
     <ul class="nav-links">
       <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
   </nav>
 
@@ -991,12 +1121,12 @@
         <span class="hl-pink">experience.</span>
       </h1>
       <p class="hero-sub fade-up">
-        I'm Oriane, a Principal AI Experience &amp; Product Designer with over 12 years shaping consumer products across travel, fintech, and SaaS.
+        I'm Oriane, a Principal Product Designer in Fitzroy. I design and build polished, practical websites for small businesses, creatives and community projects that need to feel trustworthy from the first click.
       </p>
       <div class="hero-actions fade-up">
         <a href="#work" class="btn-candy">
           See my work
-          <span class="btn-icon">↗</span>
+          <span class="btn-icon"><img src="img/arrow-down.svg" alt="" aria-hidden="true"></span>
         </a>
         <a href="#contact" class="btn-ghost">Say hello</a>
       </div>
@@ -1027,7 +1157,7 @@
         <h2 class="section-heading">Projects &amp; <em>case studies</em></h2>
       </div>
       <p class="section-sub">
-        A selection of work across AI, travel, fintech, and SaaS. New product creation and large-scale redesigns.
+        A selection of work across AI, travel, fintech and SaaS. New product creation and large-scale redesigns.
       </p>
     </div>
 
@@ -1069,7 +1199,7 @@
           <span class="card-tag">Tokens</span>
         </div>
         <h3 class="card-title">Hitch 2.0<br>design system</h3>
-        <p class="card-desc">Expanded Rome2Rio's design system to v2.0: richer token architecture, broader component coverage, and a clearer adoption path across two dev stacks.</p>
+        <p class="card-desc">Expanded Rome2Rio's design system to v2.0: richer token architecture, broader component coverage and a clearer adoption path across two dev stacks.</p>
         <span class="card-arrow">View case study </span>
       </div>
 
@@ -1112,7 +1242,7 @@
           <span class="card-tag">Systems Design</span>
         </div>
         <h3 class="card-title">Checkout flow<br>optimisation</h3>
-        <p class="card-desc">Full redesign of Afterpay's checkout (15M+ sessions monthly). Simplified the UI, introduced modular components, and rebuilt trust at the moment of purchase.</p>
+        <p class="card-desc">Full redesign of Afterpay's checkout (15M+ sessions monthly). Simplified the UI, introduced modular components and rebuilt trust at the moment of purchase.</p>
         <span class="card-arrow">View case study </span>
       </div>
 
@@ -1145,7 +1275,7 @@
           <span class="card-tag">Auth</span>
         </div>
         <h3 class="card-title">Frictionless access &amp; digital wallets</h3>
-        <p class="card-desc">Biometric login, persistent sessions, and native Apple Pay + Google Pay integration. This resolved a 40% login failure rate and put Afterpay natively in the device wallet.</p>
+        <p class="card-desc">Biometric login, persistent sessions and native Apple Pay + Google Pay integration. This resolved a 40% login failure rate and put Afterpay natively in the device wallet.</p>
         <span class="card-arrow">View case study </span>
       </div>
 
@@ -1225,7 +1355,7 @@
           <span class="card-tag">2FA</span>
         </div>
         <h3 class="card-title">Optus Perks<br>platform</h3>
-        <p class="card-desc">Full platform takeover for the Optus Perks team. Delivered a fully branded, scalable solution in 2 weeks: three entry points (My Optus App, website, EDMs), 2FA compliance, and seamless migration from the old platform.</p>
+        <p class="card-desc">Full platform takeover for the Optus Perks team. Delivered a fully branded, scalable solution in 2 weeks: three entry points (My Optus App, website, EDMs), 2FA compliance and seamless migration from the old platform.</p>
         <div class="card-metrics" style="display:flex;gap:1.25rem;margin-top:0.75rem;flex-wrap:wrap;">
           <div><span style="font-size:0.9rem;font-weight:800;color:var(--accent);display:block;">2 weeks</span><span style="font-size:0.7rem;color:var(--muted-fg);font-weight:500;">MVP delivered</span></div>
           <div><span style="font-size:0.9rem;font-weight:800;color:var(--accent);display:block;">3 platforms</span><span style="font-size:0.7rem;color:var(--muted-fg);font-weight:500;">Unified entry points</span></div>
@@ -1246,9 +1376,59 @@
           <span class="card-tag">Payments</span>
         </div>
         <h3 class="card-title">eWallet</h3>
-        <p class="card-desc">LoyaltyCorp's eWallet bridges brand loyalty and seamless payments. I designed the white-labelled consumer widget: secure card storage, 2FA flows, card verification, and an end-to-end payment system covering P2P, recurring payments, bill pay, and instalments.</p>
+        <p class="card-desc">LoyaltyCorp's eWallet bridges brand loyalty and seamless payments. I designed the white-labelled consumer widget: secure card storage, 2FA flows, card verification and an end-to-end payment system covering P2P, recurring payments, bill pay and instalments.</p>
         <span class="card-arrow">View case study </span>
       </div>
+      </div>
+
+      <!-- ══ Personal Projects ══ -->
+      <div class="company-strip">
+        <span class="company-strip-label">Personal Projects</span>
+        <span class="company-strip-line"></span>
+      </div>
+
+      <div class="company-cards cols-3">
+        <div class="project-card fade-up">
+          <div class="card-cover" style="background:#F8FAFC;padding:0;position:relative;overflow:hidden;">
+            <img src="img/bring-your-dog-map-detail.jpg" alt="Bring Your Dog website screenshot" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;border-radius:inherit;">
+            <span class="cover-label">Personal project</span>
+          </div>
+          <p class="card-meta">Personal project · Melbourne</p>
+          <div class="card-tags">
+            <span class="card-tag">Web Design</span>
+            <span class="card-tag">Local Map</span>
+            <span class="card-tag">Community</span>
+          </div>
+          <h3 class="card-title">Bring Your Dog</h3>
+          <p class="card-desc">A dog-friendly map for Melbourne's inner suburbs, helping locals find cafes, parks, pubs and places they can visit with their dogs.</p>
+          <a href="http://bringyourdog.site" class="card-link-button" target="_blank" rel="noopener">Visit site</a>
+        </div>
+
+        <div class="project-card fade-up">
+          <div class="card-cover" style="background:#171717;padding:2rem;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+            <img src="img/notorious-bong-logo.svg" alt="Notorious Bong brewery logo" style="width:70%;height:86%;object-fit:contain;display:block;">
+            <span class="cover-label">Personal project</span>
+          </div>
+          <p class="card-meta">Personal project · Cambodia</p>
+          <div class="card-tags">
+            <span class="card-tag">Branding</span>
+            <span class="card-tag">Social Media</span>
+            <span class="card-tag">Labels</span>
+          </div>
+          <h3 class="card-title">Notorious Bong<br>nanobrewery</h3>
+          <p class="card-desc">Co-founded and co-owned a tiny Cambodia-based brewery, shaping its social media identity and label design with bold illustration, comic-book energy and beer-brand mischief.</p>
+          <a href="https://www.facebook.com/NotoriousBong/" class="card-link-button" target="_blank" rel="noopener">Visit page</a>
+        </div>
+
+        <div class="project-card fit-card fade-up">
+          <p class="card-meta">Website projects</p>
+          <h3 class="card-title">A good fit for</h3>
+          <div class="fit-list">
+            <p class="fit-line"><span class="fit-dot"></span><span>Independent businesses: cafes, studios, clinics, makers, consultants and services.</span></p>
+            <p class="fit-line"><span class="fit-dot"></span><span>Community projects: directories, maps, guides, events, resources and launches.</span></p>
+            <p class="fit-line"><span class="fit-dot"></span><span>Creatives and solo operators: portfolios, booking flows and thoughtful online homes.</span></p>
+          </div>
+        </div>
       </div>
         </div>
   </section>
@@ -1268,7 +1448,7 @@
       <div class="about-text fade-up">
         <span class="section-eyebrow">About me</span>
         <p class="about-quote">I turn <em>complexity</em> into clarity, and ideas into products people love.</p>
-        <p class="about-p">I'm Oriane, a Principal AI Experience &amp; Product Designer based in Melbourne, with 12+ years designing consumer products across travel, fintech, and SaaS. I work at the intersection of complex systems and human needs.</p>
+        <p class="about-p">I'm Oriane, a Principal AI Experience &amp; Product Designer based in Melbourne, with 12+ years designing consumer products across travel, fintech and SaaS. I work at the intersection of complex systems and human needs.</p>
         <p class="about-p">I lead with purpose and care deeply about interaction quality while building systems that scale. I'm particularly drawn to AI experience design, where the thinking required is still being invented.</p>
         <div class="about-stats">
           <div class="stat-item">
@@ -1292,12 +1472,48 @@
     </div>
   </section>
 
+  <!-- ═══════ SERVICES ═══════ -->
+  <section id="services">
+    <div class="services-header">
+      <div>
+        <span class="section-eyebrow">How I can help</span>
+        <h2 class="section-heading">A website that feels<br><em>clear, current and credible.</em></h2>
+      </div>
+      <p class="section-sub">
+        From first idea to live site, I can help shape the offer, write the page structure, design the experience and build the thing people actually visit.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card fade-up">
+        <div class="service-kicker">01</div>
+        <h3 class="service-title">New websites</h3>
+        <p class="service-copy">A polished site for your business, studio, community idea or personal brand, designed around what visitors need to understand and do.</p>
+      </article>
+      <article class="service-card fade-up">
+        <div class="service-kicker">02</div>
+        <h3 class="service-title">Website refreshes</h3>
+        <p class="service-copy">Turn a dated, unclear or hard-to-update site into something sharper, easier to scan and more aligned with where your work is now.</p>
+      </article>
+      <article class="service-card fade-up">
+        <div class="service-kicker">03</div>
+        <h3 class="service-title">Local discovery projects</h3>
+        <p class="service-copy">Maps, directories, guides, landing pages and community resources that help people find useful things nearby.</p>
+      </article>
+      <article class="service-card fade-up">
+        <div class="service-kicker">04</div>
+        <h3 class="service-title">Content and structure</h3>
+        <p class="service-copy">Help clarifying your offer, shaping the pages and writing practical copy so people know what you do and how to reach you.</p>
+      </article>
+    </div>
+  </section>
+
   <!-- ═══════ HIGHLIGHTS ═══════ -->
   <section id="highlights">
     <div class="highlights-header fade-up">
       <span class="section-eyebrow">What I bring</span>
       <h2>Built to ship. Designed to last.</h2>
-      <p>12 years of product design across fintech, travel, and AI — here's what that looks like in practice.</p>
+      <p>12 years of product design across fintech, travel and AI — here's what that looks like in practice.</p>
     </div>
     <div class="highlights-grid">
 
@@ -1355,9 +1571,9 @@
   <!-- ═══════ CONTACT ═══════ -->
   <section id="contact">
     <div class="contact-inner">
-      <span class="section-eyebrow">Get in touch</span>
-      <h2 class="section-heading">Let's make something<br><em style="color:var(--yellow)">great.</em></h2>
-      <p class="section-sub">Open to new opportunities, collaborations, or just a good design conversation.</p>
+      <span class="section-eyebrow">Start a project</span>
+      <h2 class="section-heading">Need a website or<br><em style="color:var(--yellow)">refresh?</em></h2>
+      <p class="section-sub">Tell me what you're building, what feels unclear or what you wish your current site did better. I'll get back to you with the simplest next step.</p>
 
       <form action="mailto:orianevanloo@gmail.com" method="post" enctype="text/plain">
         <div class="form-row">
@@ -1372,7 +1588,7 @@
         </div>
         <div class="form-group">
           <label class="form-label" for="message">Message</label>
-          <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about the site you need, the audience and any timing you have in mind..." required></textarea>
         </div>
         <button type="submit" class="btn-candy">
           Send message
@@ -1388,6 +1604,16 @@
   </footer>
 
   <script>
+    // Keep same-page preview links local even though assets load from the live site.
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (event) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
     // Card click navigation
     document.querySelectorAll('.project-card[data-href]').forEach(card => {
       card.addEventListener('click', () => window.location.href = card.dataset.href);
