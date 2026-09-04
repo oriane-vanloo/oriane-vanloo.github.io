@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Know Your Customer · Oriane Van Loo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PG306KSZLY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PG306KSZLY');
+  </script>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Oriane<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="project-hero">
+    <div class="hero-inner">
+      <a href="index.html#work" class="back-link">Back to work</a>
+      <p class="project-company">Rome2Rio · 2026 H2</p>
+      <h1 class="project-title">Know your <em>customer</em></h1>
+      <p class="project-lead">Rome2Rio couldn't reliably identify when the same user came back. I led the product strategy to move users from anonymous browsing to logged-in accounts, combining awareness, frictionless sign-in, concrete value (save trips, price drops, profiles), and data quality work to achieve a 9x difference in return rates.</p>
+      <div class="project-tags">
+        <span class="project-tag">Product strategy</span>
+        <span class="project-tag">User retention</span>
+        <span class="project-tag">Account systems</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="case-body">
+
+    <div class="role-strip">
+      <div class="role-cell">
+        <p class="role-cell-label">My role</p>
+        <p class="role-cell-value">Product Design Lead</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Stakeholders</p>
+        <p class="role-cell-value">Product, engineering, marketing</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Outcome</p>
+        <p class="role-cell-value">64% return rate (logged-in vs 7.2% anonymous)</p>
+      </div>
+    </div>
+
+    <figure class="case-image">
+      <img src="img/savetrip-beforeafter.png" alt="Save trip feature – before and after iteration">
+      <figcaption>A simple action that connects users to their intent and keeps accounts active.</figcaption>
+    </figure>
+
+    <section class="case-section">
+      <h2>The problem</h2>
+      <p>Most Rome2Rio sessions were anonymous. There was little reason to log in, so cookies were the only way to track users – and they don't cross devices. The product couldn't tell if someone coming back on mobile was the same person who researched on desktop last week. The result: Rome2Rio had no reliable way to know who its repeat customers were, missing every opportunity to personalise, retain, or surprise them with saved trips and price alerts.</p>
+    </section>
+
+    <section class="case-section">
+      <h2>The insight</h2>
+      <p>The data told the story: logged-in users returned at 64% weekly, versus 7.2% for anonymous users. A 9x difference. The strategic lever wasn't acquisition – it was unlocking the returning user base already there. Getting users to create accounts would transform the product's ability to know, retain, and serve its customers.</p>
+    </section>
+
+    <section class="case-section">
+      <h2>The approach: four pillars</h2>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <strong>Awareness</strong>
+            <span>Surface sign-up across key entry points – search results, trip confirmation, saved pages – to make account creation visible and frictionless.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <strong>Frictionless sign-in</strong>
+            <span>Google and Omio single-sign-on, in-app account linking – reduce barriers for users ready to commit to creating an account.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <strong>Value exchange</strong>
+            <span>Give users concrete reasons to log in: save trips, price drop alerts, traveller profiles, Q&A on routes. Make the value immediate and obvious.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <strong>Data quality</strong>
+            <span>Verify emails, request preferences, surface data gaps – turn sign-up into a one-time investment that improves every future interaction.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/web-signup-awareness-beforeafter.png" alt="Before and after: sign-up awareness campaigns across key entry points">
+      <figcaption>Awareness pillar – making sign-up visible at moments when users have trip intent.</figcaption>
+    </figure>
+
+    <section class="case-section">
+      <h2>What I built</h2>
+
+      <p><strong>Sign-up and onboarding</strong> – Redesigned the full account creation flow. Frictionless options first (Google, Omio); email as a fallback. Guided data entry (traveller profiles, travel preferences) integrated into the sign-up journey rather than as a separate task.</p>
+
+      <p><strong>Core features that drive value</strong> – Save trips for later, price drop alerts that notify when fares fall, traveller profiles to pre-fill names and ages across bookings, and Q&A so users can ask route-specific questions and share travel tips.</p>
+
+      <p><strong>Email system</strong> – Built a data quality follow-up sequence that surfaces benefits users might be missing (saved trips, preference gaps, unanswered questions) and gradually improves account health over time.</p>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/web-signup-beforeafter.png" alt="Frictionless sign-in – before and after comparison">
+      <figcaption>Frictionless sign-in – removing friction was critical to converting browsers to account holders.</figcaption>
+    </figure>
+
+    <section class="case-section">
+      <h2>The features in action</h2>
+
+      <div class="process-steps" style="margin-top: 1.5rem;">
+        <div class="process-step" style="padding: 1rem 1.25rem;">
+          <div class="step-num" style="width: 28px; height: 28px; font-size: 0.7rem;">📌</div>
+          <div class="step-content">
+            <strong>Save trips</strong>
+            <span>Users bookmark routes they're thinking about. Revisit months later when ready to book.</span>
+          </div>
+        </div>
+        <div class="process-step" style="padding: 1rem 1.25rem;">
+          <div class="step-num" style="width: 28px; height: 28px; font-size: 0.7rem;">💰</div>
+          <div class="step-content">
+            <strong>Price alerts</strong>
+            <span>Notify when a saved trip drops in price. Convert saved trips into bookings at the right moment.</span>
+          </div>
+        </div>
+        <div class="process-step" style="padding: 1rem 1.25rem;">
+          <div class="step-num" style="width: 28px; height: 28px; font-size: 0.7rem;">👤</div>
+          <div class="step-content">
+            <strong>Traveller profiles</strong>
+            <span>Save passenger details once. Pre-fill every booking. Reduce friction, increase completion.</span>
+          </div>
+        </div>
+        <div class="process-step" style="padding: 1rem 1.25rem;">
+          <div class="step-num" style="width: 28px; height: 28px; font-size: 0.7rem;">❓</div>
+          <div class="step-content">
+            <strong>Questions &amp; answers</strong>
+            <span>Users ask route-specific questions (bike restrictions, bathroom breaks, luggage allowance). Community answers. Rome2Rio learns and answers too.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/savetrip-beforeafter.png" alt="Save trip feature – simple, persistent, always accessible">
+      <figcaption>Save trips – a simple action that connects users to their intent and keeps accounts active.</figcaption>
+    </figure>
+
+    <div class="pull-quote">
+      <p>"Logged-in users return at 9x the rate of anonymous users. The question wasn't how to acquire new customers – it was how to unlock the ones already there."</p>
+    </div>
+
+    <section class="case-section">
+      <h2>Results</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-cell">
+          <span class="outcome-num">64%</span>
+          <span class="outcome-label">Weekly return rate for logged-in users (vs 7.2% anonymous)</span>
+        </div>
+        <div class="outcome-cell">
+          <span class="outcome-num">+3%</span>
+          <span class="outcome-label">Increase in active logged-in session share of total web traffic</span>
+        </div>
+        <div class="outcome-cell">
+          <span class="outcome-num">✓</span>
+          <span class="outcome-label">Foundation for personalisation, retention loops, and data-driven product</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="next-project">
+    <div>
+      <p class="next-label">Back to portfolio</p>
+      <a href="index.html#work" class="next-title">All work →</a>
+    </div>
+    <a href="index.html#work" class="back-to-all">← All work</a>
+  </div>
+</body>
+</html>

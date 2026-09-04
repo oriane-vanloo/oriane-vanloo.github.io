@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-destination planning · Oriane Van Loo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PG306KSZLY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PG306KSZLY');
+  </script>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Oriane<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="project-hero">
+    <div class="hero-inner">
+      <a href="index.html#work" class="back-link">Back to work</a>
+      <p class="project-company">Rome2Rio · 2026</p>
+      <h1 class="project-title">Multi-destination <em>planning</em></h1>
+      <p class="project-lead">Users planning complex journeys with multiple stops were forced to leave the product to piece together multi-leg routes. I brought multi-stop search into the core Explore experience, allowing users to plan and compare journeys across multiple destinations without leaving the view.</p>
+      <div class="project-tags">
+        <span class="project-tag">Feature design</span>
+        <span class="project-tag">Search UX</span>
+        <span class="project-tag">Usability testing</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="case-body">
+
+    <div class="role-strip">
+      <div class="role-cell">
+        <p class="role-cell-label">My role</p>
+        <p class="role-cell-value">Product Design Lead</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Outcome</p>
+        <p class="role-cell-value">Consolidated multi-leg workflow into core product</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Method</p>
+        <p class="role-cell-value">Usability testing, iterative design</p>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <h2>The problem</h2>
+      <p>Today's trip planner guides users through a linear experience when planning multi-leg journeys. Users break their browsing flow to navigate away from Explore and piece together routes across multiple legs manually. There's no way to see all legs at once, no easy way to compare transport modes across the entire journey andno persistence for trip intent – users can't save or revisit their trip ideas without starting over.</p>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/Multi-dest-2.png" alt="Multi-destination search results showing trip overview and individual legs">
+      <figcaption>Multi-destination search keeps users in Explore with a complete trip overview.</figcaption>
+    </figure>
+
+    <section class="case-section">
+      <h2>The insight</h2>
+      <p>The trip planner functionality wasn't broken – it was just in the wrong place. By consolidating the multi-stop workflow into Explore, users can see their complete journey, modify it inline andsave it as part of a broader trip curation experience (like saving accommodation or attractions). The MVP repositions where multi-stop results surface without rebuilding the core logic.</p>
+    </section>
+
+    <section class="case-section">
+      <h2>Usability testing: six key findings</h2>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <strong>Users expected to edit destinations inline</strong>
+            <span>Three of five participants tried to add or remove stops from the results panel and were frustrated when nothing responded. Design now includes inline remove buttons on hover, drag handles to reorder andan "Add a stop" entry point below the destination timeline.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <strong>Trip total went unseen in the header</strong>
+            <span>Participants scanned individual leg prices and added them up themselves rather than reading the aggregated total in the header. Moved the total price range to the footer, directly above the Save button, where it sits in context with the action it informs.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <strong>Transport mode selection scope was unclear</strong>
+            <span>Participants didn't understand that mode selection was per-leg. Added a secondary panel showing routes per leg, plus a "Suggest options" button to auto-fill the recommended option across all legs at once.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <strong>Map value depended on user experience</strong>
+            <span>Experienced travellers found the map wasteful; less familiar users found it essential. The right panel now reduces map space when users browse modes and times, which have less spatial concern.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <strong>Save trip was discoverable and well received</strong>
+            <span>The save function performed well, so we refined it into a persistent CTA – a labelled button in the sticky footer rather than an icon, making it more explicit and always visible regardless of scroll position.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">6</div>
+          <div class="step-content">
+            <strong>Users naturally calculated journey totals</strong>
+            <span>Showing aggregate journey totals is critical – users defaulted to manual addition, signalling the need for a clear, always-visible total cost and time for the full multi-leg journey.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/Multi-dest-1.png" alt="Before and after: trip overview and interactive destination editing">
+      <figcaption>Iterating on inline destination editing based on usability test feedback.</figcaption>
+    </figure>
+
+    <section class="case-section">
+      <h2>What changed</h2>
+
+      <p><strong>Trip Overview.</strong> A condensed view of all legs at once – showing start/end destinations, mode icons, duration and price per leg. Users can immediately see their full journey and spot the most expensive or time-consuming leg.</p>
+
+      <p><strong>Inline destination editing.</strong> Each destination row becomes interactive on hover: remove button, drag handle anda clear "Add a stop" entry point below the timeline. Users can rebuild their trip without leaving the results view.</p>
+
+      <p><strong>Mode selection panel.</strong> A dedicated secondary panel shows available routes for each leg with mode breakdowns. "Suggest options" lets users auto-fill the recommended route combination across all legs at once.</p>
+
+      <p><strong>Persistent Save CTA.</strong> A labelled button in the sticky footer replaces an icon button, making the save action explicit and always visible as users scroll through options.</p>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/Multi-dest-3.png" alt="Mode selection panel showing routes per leg with suggest options">
+      <figcaption>Mode selection clarified – users can browse per-leg options or auto-fill recommended routes across all legs.</figcaption>
+    </figure>
+
+    <div class="pull-quote">
+      <p>"Bringing multi-stops into our core product meant consolidating a workflow, not rebuilding one. Users tell you where they expect to interact."</p>
+    </div>
+
+    <section class="case-section">
+      <h2>The vision beyond MVP</h2>
+      <p>The multi-destination search is a foundation. Eventually, the trip planner menu becomes a personal repository for all saved travel plans – full multi-stop itineraries, individual route segments, or destination collections. This mirrors how platforms like Airbnb let users curate and review saved items as part of their broader trip planning process. Rome2Rio shifts from a single-search tool to a trip curation platform.</p>
+    </section>
+
+    <figure class="case-image">
+      <img src="img/Multi-dest-4.png" alt="Future vision: trip planner as personal saved trips repository">
+      <figcaption>Future roadmap: trip planner as a curation tool for saved itineraries, segments andcollections.</figcaption>
+    </figure>
+
+  </div>
+
+  <div class="next-project">
+    <div>
+      <p class="next-label">Back to portfolio</p>
+      <a href="index.html#work" class="next-title">All work →</a>
+    </div>
+    <a href="index.html#work" class="back-to-all">← All work</a>
+  </div>
+</body>
+</html>

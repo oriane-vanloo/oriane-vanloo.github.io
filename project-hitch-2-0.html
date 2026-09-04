@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitch 2.0 design system – case study · Oriane Van Loo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PG306KSZLY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PG306KSZLY');
+  </script>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Oriane<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="project-hero">
+    <div class="hero-inner">
+      <a href="index.html#work" class="back-link">Back to work</a>
+      <p class="project-company">Rome2Rio · 2024–2025</p>
+      <h1 class="project-title">Hitch 2.0 <em>design system</em></h1>
+      <p class="project-lead">Rome2Rio had two separate design systems and dev stacks that had drifted apart. I unified them, defined a clear graduation path for components, and built token infrastructure that made future changes—like a typeface swap—trivial across both stacks.</p>
+      <div class="project-tags">
+        <span class="project-tag">Design systems</span>
+        <span class="project-tag">Token architecture</span>
+        <span class="project-tag">Cross-stack coordination</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="case-body">
+
+    <div class="role-strip">
+      <div class="role-cell">
+        <p class="role-cell-label">My role</p>
+        <p class="role-cell-value">Product Design Lead</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Team</p>
+        <p class="role-cell-value">Engineering, product, brand</p>
+      </div>
+      <div class="role-cell">
+        <p class="role-cell-label">Outcome</p>
+        <p class="role-cell-value">95% adoption, 80% reduction in duplicates</p>
+      </div>
+    </div>
+
+    <section class="case-section">
+      <h2>The problem</h2>
+      <p>Designers hunted across Figma files. Engineers couldn't find components quickly. Storybook mixed old and new versions with no clear path forward. Token naming didn't match between stacks. Every new feature meant rework. This wasn't just inconvenient – it was an organisational efficiency tax.</p>
+    </section>
+
+    <section class="case-section">
+      <h2>What I built</h2>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <strong>Single source of truth</strong>
+            <span>Unified Figma library replacing two systems, with naming conventions audited with engineering. Component showcase at <code>/design-system/hitch-2-0</code> showing usage and code snippets.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <strong>Token system</strong>
+            <span>OKLCH + APCP colour model. Semantic tokens (e.g. <code>color.action.primary</code>) rather than primitives, so design intent was captured and theming became systematic.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <strong>Graduation path</strong>
+            <span>Six-step process: propose, validate, build, adopt, graduate, maintain. Same path works at any scale so teams know exactly where a component is.</span>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <strong>Documentation</strong>
+            <span>Storybook with documented states. Usage notes, do's/don'ts, accessibility guidance. Clear migration paths for deprecated components.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pull-quote">
+      <p>"When I suggested switching from Roboto to Google Sans, the entire product's typography changed in a day with zero rework. That's what infrastructure thinking looks like."</p>
+    </div>
+
+    <section class="case-section">
+      <h2>How infrastructure compounds</h2>
+      <p>Rome2Rio wanted to feel more approachable, so I suggested a typeface change. In a fragmented system, this would have meant hunting through dozens of Figma files, updating each one, hoping nothing broke, coordinating across stacks.</p>
+
+      <p>Because I'd tokenised typography early, it was trivial: one token update in Figma, and every component using that token updated automatically. The switch happened in a day with zero rework. That single token did months of compounding work – it unlocked the ability to make global changes easily, forever.</p>
+    </section>
+
+    <section class="case-section">
+      <h2>Results</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-cell">
+          <span class="outcome-num">95%</span>
+          <span class="outcome-label">Design team now uses Hitch for component decisions</span>
+        </div>
+        <div class="outcome-cell">
+          <span class="outcome-num">80%</span>
+          <span class="outcome-label">Reduction in duplicate component versions in 60 days</span>
+        </div>
+        <div class="outcome-cell">
+          <span class="outcome-num">→</span>
+          <span class="outcome-label">Foundation for dark mode, iOS and Android extensions</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="next-project">
+    <div>
+      <p class="next-label">Next case study</p>
+      <a href="project-uxr.html" class="next-title">UXR practice →</a>
+    </div>
+    <a href="index.html#work" class="back-to-all">← All work</a>
+  </div>
+</body>
+</html>
