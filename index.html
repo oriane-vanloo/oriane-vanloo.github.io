@@ -1051,7 +1051,7 @@
     .fade-up {
       opacity: 0;
       transform: translateY(24px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
+      transition: opacity 0.35s ease, transform 0.35s ease;
     }
     .fade-up.visible {
       opacity: 1;
@@ -1658,7 +1658,7 @@
 
     // Stagger hero fade-ups
     document.querySelectorAll('#hero .fade-up').forEach((el, i) => {
-      el.style.transitionDelay = `${i * 0.12}s`;
+      el.style.transitionDelay = `${i * 0.06}s`;
     });
   </script>
 </body>
