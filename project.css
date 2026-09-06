@@ -110,6 +110,10 @@ nav {
   background: var(--project-accent-dark);
   box-shadow: var(--shadow);
 }
+.project-hero .back-link:hover {
+  box-shadow: none;
+}
+
 .back-link::before { content: '←'; }
 
 .project-company {
