@@ -20,7 +20,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: 'Google Sans', system-ui, sans-serif;
   background: var(--bg);
   color: var(--fg);
   line-height: 1.6;
@@ -42,17 +42,17 @@ nav {
   border-bottom: 2px solid var(--fg);
 }
 .nav-logo {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 1.05rem;
   font-weight: 800;
   color: var(--fg);
   text-decoration: none;
   letter-spacing: -0.02em;
 }
-.nav-logo span { color: var(--accent); }
+.nav-logo span { color: var(--project-accent-bg); }
 .nav-links { display: flex; gap: 0.4rem; list-style: none; align-items: center; }
 .nav-links a {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--fg);
@@ -71,85 +71,74 @@ nav {
 
 /* ─── PROJECT HERO ─── */
 .project-hero {
-  background: #0E0A14;
+  background: var(--project-accent-bg, #FFFDF5);
   padding: 10rem 4rem 5rem;
   position: relative;
   overflow: hidden;
 }
 .project-hero::before {
-  content: '';
-  position: absolute;
-  top: -10%; right: -5%;
-  width: 50vw; height: 50vw;
-  max-width: 600px; max-height: 600px;
-  background: radial-gradient(circle, rgba(139,92,246,0.25) 0%, transparent 65%);
-  border-radius: 50%;
-  pointer-events: none;
+  display: none;
 }
 .project-hero::after {
-  content: '';
-  position: absolute;
-  bottom: -5%; left: -5%;
-  width: 30vw; height: 30vw;
-  max-width: 380px; max-height: 380px;
-  background: radial-gradient(circle, rgba(244,114,182,0.15) 0%, transparent 65%);
-  border-radius: 50%;
-  pointer-events: none;
+  display: none;
 }
 .hero-inner { max-width: 900px; position: relative; z-index: 1; }
 
 .back-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  color: var(--project-accent-dark);
   text-decoration: none;
   margin-bottom: 2.5rem;
-  padding: 0.4rem 1rem;
+  padding: 0.8rem 2rem;
   border-radius: 9999px;
-  border: 2px solid rgba(255,255,255,0.15);
+  border: 2px solid var(--project-accent-dark);
+  background: transparent;
   transition: all 0.2s;
+  cursor: pointer;
 }
 .back-link:hover {
   color: #fff;
-  border-color: var(--accent);
-  background: rgba(139,92,246,0.15);
+  border-color: var(--project-accent-dark);
+  background: var(--project-accent-dark);
+  box-shadow: var(--shadow);
 }
 .back-link::before { content: '←'; }
 
 .project-company {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  color: #1A1A1A;
   margin-bottom: 1rem;
 }
 
 .project-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: clamp(2.4rem, 5vw, 4.2rem);
   font-weight: 800;
   line-height: 1.06;
   letter-spacing: -0.03em;
-  color: #fff;
+  color: var(--project-accent-dark);
   margin-bottom: 1.5rem;
 }
 .project-title em {
   font-style: normal;
-  color: var(--yellow);
 }
 
 .project-lead {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 1.05rem;
-  color: rgba(255,255,255,0.55);
+  color: #1A1A1A;
   max-width: 620px;
   line-height: 1.8;
   margin-bottom: 2rem;
@@ -161,16 +150,28 @@ nav {
   gap: 0.5rem;
 }
 .project-tag {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 0.3rem 0.85rem;
   border-radius: 9999px;
-  background: rgba(139,92,246,0.18);
-  border: 1.5px solid rgba(139,92,246,0.45);
-  color: rgba(255,255,255,0.75);
+  background: transparent;
+  border: 2px solid var(--project-accent-dark);
+  color: var(--project-accent-dark);
+}
+.project-tag {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  background: transparent;
+  border: 2px solid var(--project-accent-dark);
+  color: var(--project-accent-dark);
 }
 
 /* ─── CASE STUDY BODY ─── */
@@ -184,7 +185,7 @@ nav {
   margin-bottom: 4rem;
 }
 .case-section h2 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: clamp(1.35rem, 2.5vw, 1.85rem);
   font-weight: 800;
   letter-spacing: -0.025em;
@@ -201,14 +202,14 @@ nav {
   display: inline-block;
   width: 10px;
   height: 10px;
-  background: var(--yellow);
+  background: var(--project-accent-bg);
   border: 2px solid var(--fg);
   border-radius: 50%;
   flex-shrink: 0;
   box-shadow: var(--shadow-sm);
 }
 .case-section p {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 1rem;
   color: var(--muted-fg);
   line-height: 1.85;
@@ -240,7 +241,7 @@ nav {
 .role-strip { box-shadow: var(--shadow); border-radius: 16px; }
 
 .role-cell-label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -249,7 +250,7 @@ nav {
   margin-bottom: 0.4rem;
 }
 .role-cell-value {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--fg);
@@ -277,9 +278,9 @@ nav {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--project-accent-bg);
   color: #fff;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.78rem;
   font-weight: 800;
   display: flex;
@@ -293,14 +294,14 @@ nav {
 .step-content { flex: 1; }
 .step-content strong {
   display: block;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--fg);
   margin-bottom: 0.3rem;
 }
 .step-content span {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.88rem;
   color: var(--muted-fg);
   line-height: 1.7;
@@ -323,7 +324,7 @@ nav {
   border: none;
 }
 .case-image figcaption {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.78rem;
   font-weight: 500;
   color: rgba(255,253,245,0.86);
@@ -340,7 +341,7 @@ nav {
   margin: 3rem 0;
 }
 .compare-item figcaption {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -391,17 +392,17 @@ nav {
 }
 
 .outcome-num {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 2.2rem;
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--accent);
+  color: var(--project-accent-bg);
   line-height: 1;
   margin-bottom: 0.4rem;
   display: block;
 }
 .outcome-label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.83rem;
   font-weight: 500;
   color: var(--muted-fg);
@@ -411,7 +412,7 @@ nav {
 
 /* ─── PULL QUOTE ─── */
 .pull-quote {
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--project-accent-bg);
   padding: 1.25rem 1.75rem;
   margin: 2.5rem 0;
   background: var(--card);
@@ -423,7 +424,7 @@ nav {
 }
 .pull-quote p,
 .pull-quote blockquote {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--fg);
@@ -435,7 +436,7 @@ nav {
 }
 .pull-quote cite {
   display: block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--muted-fg);
@@ -445,55 +446,112 @@ nav {
 }
 
 /* ─── NEXT PROJECT ─── */
+/* ─── FOOTER / NEXT PROJECT ─── */
 .next-project {
   border-top: 2px solid var(--fg);
   padding: 3rem 4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: start;
 }
-.next-label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted-fg);
-  margin-bottom: 0.5rem;
-  display: block;
-}
-.next-title {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--fg);
-  text-decoration: none;
-  transition: color 0.18s;
-}
-.next-title:hover { color: var(--accent); }
-.next-link {
+
+.nav-prev, .nav-next {
   text-decoration: none;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
-.back-to-all {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.85rem;
+
+.nav-prev {
+  text-align: left;
+}
+
+.nav-prev:empty {
+  visibility: hidden;
+}
+
+.nav-next {
+  text-align: right;
+}
+
+.nav-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.nav-label {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.68rem;
   font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-fg);
+  margin: 0;
+}
+
+.nav-title {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--fg);
   text-decoration: none;
-  padding: 0.7rem 1.4rem;
-  border-radius: 9999px;
-  border: 2px solid var(--fg);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.18s cubic-bezier(0.34,1.56,0.64,1);
+  margin: 0;
+  transition: color 0.2s;
 }
-.back-to-all:hover {
-  background: var(--yellow);
-  transform: translate(-2px,-2px);
+
+.nav-prev .nav-title:hover,
+.nav-next .nav-title:hover {
+  color: var(--project-accent-bg);
+}
+
+.nav-home {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--project-accent-dark);
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 9999px;
+  border: 2px solid var(--project-accent-dark);
+  background: transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nav-home:hover {
+  color: var(--project-accent-dark);
+  border-color: var(--project-accent-bg);
+  background: var(--project-accent-bg);
   box-shadow: var(--shadow);
+}
+
+@media (max-width: 768px) {
+  .next-project {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+  
+  .nav-prev, .nav-next {
+    text-align: center;
+  }
+  
+  .nav-prev .nav-title::before {
+    content: '';
+  }
+  
+  .nav-next .nav-title::before {
+    content: '';
+  }
 }
 
 /* ─── FOOTER ─── */
@@ -510,7 +568,7 @@ footer {
   align-items: center;
 }
 .footer-logo {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.95rem;
   font-weight: 800;
   color: rgba(255,255,255,0.4);
@@ -518,7 +576,7 @@ footer {
   letter-spacing: -0.01em;
 }
 .footer-copy {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
   font-size: 0.78rem;
   color: rgba(255,255,255,0.2);
 }
