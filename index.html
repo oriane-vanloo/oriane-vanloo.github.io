@@ -1030,26 +1030,55 @@
     .form-textarea { resize: vertical; min-height: 120px; }
 
     /* ─── FOOTER ─── */
-    footer {
-      background: var(--fg);
-      border-top: 2px solid rgba(255,255,255,0.06);
-      padding: 3.5rem 4rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative; z-index: 1;
-    }
-    .footer-logo {
-      font-family: 'Google Sans', sans-serif;
-      font-weight: 800;
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.86);
-      text-decoration: none;
-    }
-    .footer-copy {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.72);
-    }
+   footer {
+  background: var(--fg);
+  border-top: 2px solid rgba(255,255,255,0.06);
+  padding: 3.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+.footer-logo {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.footer-sep {
+  color: rgba(255,255,255,0.4);
+}
+.footer-cv {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: rgba(255,255,255,0.4);
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.footer-cv:hover {
+  opacity: 0.7;
+}
+.cv-icon {
+  width: 16px;
+  height: 16px;
+}
+.footer-copy {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.2);
+}
 
     /* ─── SCROLL REVEAL ─── */
     .fade-up {
