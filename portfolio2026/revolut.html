@@ -58,7 +58,7 @@ p{margin:0}
 .hero-grid{display:grid; grid-template-columns:1.25fr 1fr; gap:clamp(24px,4vw,56px); align-items:center}
 .status{display:inline-flex; align-items:center; gap:10px; padding:8px 16px 8px 12px; border-radius:999px; background:var(--surface); border:var(--bd); box-shadow:var(--shadow-sm); font:700 12px/1.2 var(--body); letter-spacing:.08em; text-transform:uppercase}
 .status b{width:9px; height:9px; border-radius:50%; background:var(--mint); outline:2px solid var(--ink)}
-.magnet{font-family:var(--display); font-size:clamp(34px,4.7vw,66px); line-height:1.05; letter-spacing:0; margin-top:24px; font-weight:680; font-variation-settings:"wght" 680, "ROND" 0, "opsz" 48; cursor:default; user-select:none}
+.magnet{font-family:var(--display); font-size:clamp(34px,4.7vw,66px); line-height:1.05; letter-spacing:0; margin-top:24px; font-weight:800; cursor:default; user-select:none}
 .magnet .w{display:inline-block; white-space:nowrap}
 .magnet .c{display:inline-block; text-align:center; will-change:transform}
 .magnet .v{color:var(--accent)}
@@ -507,7 +507,7 @@ h1,h2,h3,h4{font-family:var(--display); font-weight:700; letter-spacing:-0.035em
 .sun{display:none}
 .status{background:rgba(255,255,255,.08); color:#fff; border:1px solid rgba(255,255,255,.14)!important; box-shadow:none!important; font-family:var(--body)}
 .status b{outline:0; background:var(--mint)}
-.magnet{font-family:var(--display); font-weight:680; font-variation-settings:"wght" 680, "opsz" 48; text-transform:none; letter-spacing:0; line-height:1.06; font-size:clamp(36px,4.4vw,64px)}
+.magnet{font-family:var(--display); font-weight:800; text-transform:none; letter-spacing:0; line-height:1.06; font-size:clamp(36px,4.4vw,64px)}
 .magnet .y{background:none; color:#4C8DFF; padding:0; border-radius:0}
 .magnet .v{color:#fff; opacity:.55}
 .hero-sub{color:rgba(255,255,255,.72)}
@@ -555,6 +555,10 @@ h1,h2,h3,h4{font-family:var(--display); font-weight:700; letter-spacing:-0.035em
 .card{border:0!important; box-shadow:var(--shadow)!important; border-radius:var(--r-md)}
 .stage-card{box-shadow:var(--shadow-lg)!important}
 .stats div{border:0!important; background:var(--soft)!important}
+.stats div{transition:background .25s ease, color .25s ease, transform .25s ease}
+.stats div:hover{background:var(--ink)!important; color:#fff; transform:translateY(-2px)}
+.stats div:hover span{color:#fff; opacity:.7}
+@media (prefers-reduced-motion:reduce){.stats div{transition:none}.stats div:hover{transform:none}}
 .dots i.on{background:var(--accent)} .gfig:nth-child(2) .dots i.on{background:#8C5CFF}
 .gfig .big{font-weight:800}
 .rail i{border:0!important; background:var(--line)} .rail i.on{background:var(--accent)}
