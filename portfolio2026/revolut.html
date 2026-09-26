@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Oriane Van Loo</title>
+<title>Oriane Van Loo – Portfolio</title>
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="googlebot" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -471,6 +471,191 @@ footer{padding-block:28px 40px; font-size:13px; color:var(--muted); text-align:c
 .flip:nth-child(1){rotate:-1.5deg} .flip:nth-child(2){rotate:1deg} .flip:nth-child(3){rotate:1deg} .flip:nth-child(4){rotate:-1deg}
 @media (prefers-reduced-motion: reduce){ .flip-in{transition:none} }
 @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important; transition:none!important} }
+/* ===== Revolut-inspired theme overrides ===== */
+:root{
+  --bg:#FFFFFF; --surface:#FFFFFF; --ink:#191C1F; --muted:#6F7378; --line:#E8E9EB; --soft:#F4F4F5;
+  --accent:#0666EB; --accent-deep:#0450BD; --accent-ink:#FFFFFF;
+  --pink:#8C5CFF; --yellow:#0666EB; --mint:#00B67A; --sky:#0666EB;
+  --t-violet:#F4F4F5; --t-violet2:#F4F4F5; --t-pink:#F4F4F5; --t-yellow:#F4F4F5; --t-mint:#F4F4F5; --t-sky:#F4F4F5;
+  --bd:1px solid #E8E9EB;
+  --shadow-sm:none; --shadow:0 1px 2px rgba(25,28,31,.04), 0 10px 30px -12px rgba(25,28,31,.12); --shadow-lg:0 2px 4px rgba(25,28,31,.04), 0 24px 60px -24px rgba(25,28,31,.25);
+  --display:"Google Sans Flex", "Google Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --body:"Google Sans", "Google Sans Flex", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r-lg:40px; --r-md:24px; --r-sm:16px; --phone-bg:#F4F4F5;
+  --dark:#0B0C0E; --dark-2:#16181C; --grad:linear-gradient(135deg,#0666EB 0%,#6A5CFF 55%,#C04BFF 100%);
+}
+body{font-family:var(--body); letter-spacing:-0.005em}
+h1,h2,h3,h4{font-family:var(--display); font-weight:700; letter-spacing:-0.035em}
+.label{font-family:var(--body); font-weight:600; letter-spacing:.06em}
+
+/* nav */
+.nav{background:rgba(11,12,14,.72); border-bottom:0; color:#fff}
+.nav .brand{color:#fff; font-family:var(--display); font-weight:700}
+.nav .brand span{color:#fff}
+.nav ul a:not(.pill){color:rgba(255,255,255,.78)}
+.nav ul a:not(.pill):hover{background:rgba(255,255,255,.1); color:#fff}
+
+/* pills */
+.pill{border:0!important; box-shadow:none!important; font-family:var(--body); font-weight:600}
+.pill.primary{background:#fff; color:var(--ink)}
+.pill.ghost{background:rgba(255,255,255,.12); color:#fff}
+.pill:hover{transform:translateY(-1px)}
+
+/* hero */
+.hero{background:var(--dark); color:#fff; margin-top:-64px; padding-top:calc(64px + clamp(48px,8vw,110px)); padding-bottom:clamp(40px,6vw,72px)}
+.hero::before{content:""; position:absolute; z-index:-1; right:-10%; top:-20%; width:70%; height:120%; background:radial-gradient(closest-side, rgba(106,92,255,.45), rgba(6,102,235,.18) 55%, transparent 75%); pointer-events:none}
+.sun{display:none}
+.status{background:rgba(255,255,255,.08); color:#fff; border:1px solid rgba(255,255,255,.14)!important; box-shadow:none!important; font-family:var(--body)}
+.status b{outline:0; background:var(--mint)}
+.magnet{font-family:var(--display); font-weight:680; font-variation-settings:"wght" 680, "opsz" 48; text-transform:none; letter-spacing:0; line-height:1.06; font-size:clamp(36px,4.4vw,64px)}
+.magnet .y{background:none; color:#4C8DFF; padding:0; border-radius:0}
+.magnet .v{color:#fff; opacity:.55}
+.hero-sub{color:rgba(255,255,255,.72)}
+.hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)!important}
+.art{max-width:500px!important}
+@media (max-width:900px){ .hero-grid{grid-template-columns:1fr!important} }
+.photo{border:0!important; box-shadow:0 30px 80px -30px rgba(0,0,0,.8)!important; border-radius:36px!important; inset:6% 8% 6% 8%!important; background:#1c1f24}
+.shape{border:0!important; box-shadow:none!important}
+.s-pill{background:var(--grad)!important; opacity:.95}
+.s-circle{background:#fff!important}
+.s-square{background:var(--accent)!important; border-radius:14px!important}
+.s-dots{background-image:radial-gradient(rgba(255,255,255,.25) 2px, transparent 2.5px)!important}
+.tag{border:0!important; box-shadow:0 12px 30px -12px rgba(0,0,0,.6)!important; border-radius:999px!important; font-family:var(--body); font-weight:600; padding:10px 16px!important}
+.tag.t1{background:#fff!important; color:var(--ink)!important}
+.tag.t2{background:var(--accent)!important; color:#fff!important}
+.tag.t3{background:rgba(255,255,255,.14)!important; color:#fff!important; backdrop-filter:blur(8px)}
+.worked{border:0!important; background:#fff; border-radius:28px; padding:22px 28px!important; margin-top:clamp(40px,6vw,64px)}
+.worked .label{color:var(--muted)}
+
+/* bands */
+.band{border:0!important; border-radius:var(--r-lg); background:var(--soft)!important}
+.band.mint{background:var(--dark)!important; color:#fff}
+.band.mint .lede,.band.mint .sub-head p,.band.mint .source,.band.mint > .wrap > .muted{color:rgba(255,255,255,.66)}
+.band.mint .label{color:rgba(255,255,255,.6)}
+.band.mint .card .label,.band.mint .kpis .label{color:var(--muted)}
+.band.mint .card,.band.mint .kpis div,.band.mint .decisions li,.band.mint .prob{color:var(--ink)}
+.band.mint .eyebrow{background:rgba(255,255,255,.1); color:#fff}
+.band.mint .chip{background:rgba(255,255,255,.08); color:#fff}
+.band.mint .chip .label{color:rgba(255,255,255,.6)}
+.band.mint .twocol{color:rgba(255,255,255,.85)}
+.band.mint .tab{background:rgba(255,255,255,.06)!important; color:#fff}
+.band.mint .tab .d{color:rgba(255,255,255,.66)}
+.band.mint .tab[aria-selected="true"]{background:#fff!important; color:var(--ink)}
+.band.mint .tab[aria-selected="true"] .d{color:var(--muted)}
+.band.mint .tab .label{color:rgba(255,255,255,.55)} .band.mint .tab[aria-selected="true"] .label{color:var(--muted)}
+.band.mint .quote{color:#fff}
+.band.mint .prob.vision{background:var(--grad)!important; color:#fff}
+.band.mint .prob.vision .label{color:rgba(255,255,255,.8)} .band.mint .prob.vision ul{color:rgba(255,255,255,.9)}
+.band.mint .compare .ctag{color:var(--ink)}
+.eyebrow{border:0!important; box-shadow:none!important; background:#fff; font-family:var(--body)}
+.h-case{font-weight:800; letter-spacing:-0.045em}
+.chip{border:0!important; background:#fff}
+
+/* cards */
+.card{border:0!important; box-shadow:var(--shadow)!important; border-radius:var(--r-md)}
+.stage-card{box-shadow:var(--shadow-lg)!important}
+.stats div{border:0!important; background:var(--soft)!important}
+.dots i.on{background:var(--accent)} .gfig:nth-child(2) .dots i.on{background:#8C5CFF}
+.gfig .big{font-weight:800}
+.rail i{border:0!important; background:var(--line)} .rail i.on{background:var(--accent)}
+.step{border:1px solid var(--line)!important; background:#fff; box-shadow:none}
+.step.on{border-color:transparent!important; box-shadow:var(--shadow)!important; transform:none}
+.step .when{background:var(--soft); color:var(--ink)}
+.step.on .when{background:var(--accent); color:#fff}
+.give,.brief,.idrow,.sp,.four span{border:0!important}
+.give{box-shadow:var(--shadow)!important}
+.give .gh{background:var(--ink)}
+.paradox{font-family:var(--display)}
+.flip .face{box-shadow:0 6px 16px -8px rgba(25,28,31,.25)}
+.posts span{box-shadow:0 6px 16px -8px rgba(25,28,31,.25)}
+
+/* tabs */
+.tab{border:0!important; background:transparent!important; box-shadow:none!important; transform:none!important; border-radius:20px}
+.tab:hover{background:rgba(25,28,31,.04)!important}
+.tab[aria-selected="true"]{background:#fff!important; box-shadow:var(--shadow)!important}
+.tab .t{font-weight:700}
+.panel{box-shadow:var(--shadow-lg)!important}
+.panel .media{border:0!important; border-radius:18px}
+.panel li{border:0!important; background:var(--soft)!important; font-weight:500}
+.rec{border:0!important}
+.clipwrap .cliptag,.compare .ctag{border:0!important; background:rgba(255,255,255,.92); box-shadow:0 4px 14px -6px rgba(0,0,0,.3)}
+.compare{box-shadow:none!important}
+.compare .ctag.r{background:var(--accent)!important; color:#fff!important}
+.compare .handle::before{background:var(--accent)}
+.compare .handle span{background:var(--accent)!important; color:#fff!important; border:0!important; box-shadow:0 8px 24px -8px rgba(6,102,235,.7)!important}
+.devframe{background:#191C1F; box-shadow:var(--shadow-lg)}
+
+/* checks, outcome, evidence */
+.checks li::before{background:var(--accent); color:#fff; border:0!important}
+.evidence img{border:0!important}
+.pe2-table img{border:0}
+
+/* afterpay */
+.kpis div{border:0!important; box-shadow:none!important}
+.kpis b{font-weight:800}
+.decisions li{border:0!important; background:#fff}
+.prob{border:0!important; box-shadow:none!important}
+.timeline div{border:1px solid var(--line)!important; background:#fff}
+.timeline b{color:var(--accent)}
+.bignums div{border:0!important; box-shadow:none!important}
+.media-plain{background:var(--soft)!important}
+.cv-grid>div{border:0!important; background:var(--soft)!important}
+.cv-phases li{border:1px solid var(--line)!important}
+.sys-flows{background:#0B0B0F!important}
+
+/* leadership */
+.l3{border:0!important; box-shadow:none!important; background:#fff!important}
+.l3 li{border:0!important; background:var(--soft)!important}
+.lead figure img{border:0!important; rotate:0deg; border-radius:28px; box-shadow:var(--shadow-lg)!important}
+.leadgrid div{border:0!important; box-shadow:none!important; background:#fff}
+.leadgrid .culture{background:var(--ink)!important; color:#fff}
+.leadgrid .culture p{color:rgba(255,255,255,.7)} .leadgrid .culture .label{color:rgba(255,255,255,.55)}
+.leadgrid div:hover{transform:translateY(-2px); box-shadow:var(--shadow)!important}
+
+/* principles */
+.principles div{border:0!important; box-shadow:none!important; background:var(--soft)!important; color:var(--ink)}
+.principles div{transition:background .25s ease, color .25s ease, transform .25s ease}
+.principles div:hover{background:var(--ink)!important; color:#fff; transform:translateY(-2px)}
+.principles div:hover p{opacity:.7}
+@media (prefers-reduced-motion:reduce){.principles div{transition:none}.principles div:hover{transform:none}}
+
+/* thanks */
+#thanks{background:var(--dark)!important; color:#fff}
+#thanks .eyebrow{background:rgba(255,255,255,.1); color:#fff}
+.contact h2 span{color:#4C8DFF}
+.contact h2{font-weight:800; letter-spacing:-0.035em}
+
+/* post-it palette (soft pastels) */
+.q1 .face{background:#FFDCCB!important} .q2 .face{background:#CDEFD9!important} .q3 .face{background:#FFF0B8!important} .q4 .face{background:#FFD3DC!important}
+.flip .face{color:#191C1F}
+.posts span{background:#CDEFD9!important; color:#191C1F}
+.posts span:nth-child(even){background:#DCEBFF!important}
+.notes span:nth-child(3n+1){background:#FFF0B8!important} .notes span:nth-child(3n+2){background:#FFDCCB!important} .notes span:nth-child(3n){background:#CDEFD9!important}
+
+/* fewer capitals */
+.eyebrow,.status,.cliptag,.compare .ctag,.face .fhint,.step .when,.verdict,.idrow .anon{text-transform:none!important; letter-spacing:0!important; font-size:13px!important; font-weight:600!important}
+.face .fhint{font-size:11px!important; opacity:.6}
+
+/* logo line */
+.logo-line{padding-block:clamp(28px,4vw,44px)}
+.logo-line .logos{justify-content:space-between; gap:18px 28px}
+.logo-line .lg-r2r{height:22px} .logo-line .lg-block{height:20px} .logo-line .lg-cash{height:22px} .logo-line .lg-ap{height:28px} .logo-line .lg-myob{height:23px} .logo-line .lg-optus{height:18px}
+.logo-line img{opacity:.9}
+@media (max-width:760px){ .logo-line .logos{justify-content:center} }
+
+.research-card{background:var(--grad)!important; color:#fff}
+.research-card .label{color:rgba(255,255,255,.75)!important}
+.research-card h4{color:#fff}
+.research-card .checks li{color:#fff}
+.research-card .checks li::before{background:#fff!important; color:var(--accent)!important}
+.research-card .source{color:rgba(255,255,255,.8)!important}
+
+.sys-v{display:grid; gap:16px}
+.sys-video{margin:0; padding:12px; background:#fff!important}
+.sys-video video{border-radius:14px; background:#F7F7F8}
+.sys-video figcaption{font-size:13.5px; color:var(--muted); padding:10px 4px 2px}
+.sys-v .kpis-col{grid-template-columns:repeat(3,1fr)}
+@media (max-width:560px){ .sys-v .kpis-col{grid-template-columns:1fr} }
 </style>
 </head>
 <body>
@@ -507,21 +692,19 @@ footer{padding-block:28px 40px; font-size:13px; color:var(--muted); text-align:c
         <div class="layer tag t3" data-depth="0.6">Melbourne</div>
       </div>
     </div>
-    <div class="worked">
-      <span class="label">Where I’ve worked</span>
-      <ul class="logos">
+  </div>
+</header>
+
+<main>
+<div class="wrap logo-line" aria-label="Where I’ve worked"><ul class="logos">
         <li><img class="lg-r2r" src="img/logo-rome2rio.png" alt="Rome2Rio" width="590" height="120"></li>
         <li><img class="lg-block" src="img/logo-block.png" alt="Block" width="548" height="120"></li>
         <li><img class="lg-cash" src="img/logo-cashapp.png" alt="Cash App" width="532" height="120"></li>
         <li><img class="lg-ap" src="img/logo-afterpay.png" alt="Afterpay" width="344" height="120"></li>
         <li><img class="lg-myob" src="img/logo-myob.png" alt="MYOB" width="290" height="120"></li>
         <li><img class="lg-optus" src="img/logo-optus.png" alt="Optus Perks" width="876" height="120"></li>
-      </ul>
-    </div>
-  </div>
-</header>
+      </ul></div>
 
-<main>
 <!-- ================= KYC ================= -->
 <section id="kyc" class="band violet">
   <div class="wrap">
@@ -725,7 +908,7 @@ footer{padding-block:28px 40px; font-size:13px; color:var(--muted); text-align:c
         <figure class="card wide-fig"><img src="img/ap-arcade-variants.webp" alt="The same layout serving Pay in 4, Pay Monthly, Pay now and Express checkout." width="2000" height="864" loading="lazy"><figcaption>One layout for Pay in 4, Pay Monthly, Pay now and Express</figcaption></figure>
       </div>
       <div class="duo duo-text">
-        <div class="card pad">
+        <div class="card pad research-card">
           <span class="label">Validated with research</span>
           <h4>Testing comprehension, hierarchy and patterns</h4>
           <ul class="checks tight">
@@ -741,13 +924,13 @@ footer{padding-block:28px 40px; font-size:13px; color:var(--muted); text-align:c
 
     <!-- Beyond the core flow -->
     <div class="sub">
-      <div class="sub-head"><span class="label">Beyond the core flow</span><h3>Four launches that extended the checkout</h3><p>Alongside the redesign I led the work that took Afterpay to new surfaces: one-tap checkout, a wallet partnership, the Cash App convergence and a tool for merchants.</p></div>
+      <div class="sub-head"><span class="label">Beyond the core flow</span><h3>Four launches that extended the checkout</h3><p>Alongside the redesign I led the work that took Afterpay to new surfaces: one-tap checkout, the Cash App convergence, a tool for merchants and a wallet partnership.</p></div>
       <div class="tabs">
         <div class="tablist" role="tablist" aria-label="Afterpay launches">
           <button class="tab" role="tab" id="a0" aria-controls="ap0" aria-selected="true"><span class="label">Conversion</span><span class="t">Express Checkout</span><span class="d">Checkout straight from the bag or product page, with saved Afterpay details.</span><span class="prog"></span></button>
-          <button class="tab" role="tab" id="a1" aria-controls="ap1" aria-selected="false" tabindex="-1"><span class="label">Partnership</span><span class="t">Google Pay integration</span><span class="d">Afterpay inside Google Pay, powered by virtual cards.</span><span class="prog"></span></button>
           <button class="tab" role="tab" id="acv" aria-controls="apcv" aria-selected="false" tabindex="-1"><span class="label">Cash App</span><span class="t">Checkout convergence</span><span class="d">One checkout connecting Cash App and Afterpay, built to scale.</span><span class="prog"></span></button>
           <button class="tab" role="tab" id="a2" aria-controls="ap2" aria-selected="false" tabindex="-1"><span class="label">Merchants</span><span class="t">Dynamic Messaging</span><span class="d">Relevant payment messaging on merchant sites, with no code.</span><span class="prog"></span></button>
+          <button class="tab" role="tab" id="a1" aria-controls="ap1" aria-selected="false" tabindex="-1"><span class="label">Partnership</span><span class="t">Google Pay integration</span><span class="d">Afterpay inside Google Pay, powered by virtual cards.</span><span class="prog"></span></button>
         </div>
         <div>
           <div class="card panel" role="tabpanel" id="ap0" aria-labelledby="a0">
@@ -793,17 +976,14 @@ footer{padding-block:28px 40px; font-size:13px; color:var(--muted); text-align:c
     <!-- System -->
     <div class="sub">
       <div class="sub-head"><span class="label">Built to scale</span><h3>One modular system for every plan and market</h3><p>I restructured the page around three jobs: know the merchant, choose how to pay, confirm. Each section expands on its own, so new plans, payment methods and markets slot in without a redesign. I documented hundreds of states, edge cases and variants as the single source of truth for engineering.</p></div>
-      <div class="sys">
-        <figure class="card sys-flows"><img src="img/ap-checkout-flows.webp" alt="Redesigned checkout across Pay in 4, 12-month plan, Cash App payment and confirmation screens." width="982" height="1600" loading="lazy"></figure>
-        <div class="sys-side">
-          <div class="kpis kpis-col">
+      <div class="sys-v">
+        <figure class="card sys-video"><video class="clip" poster="img/v-checkout.webp" width="1400" height="928" autoplay muted loop playsinline preload="metadata" aria-label="Checkout component in Figma: toggling theme, checkout type, section headings, summary details and fine print to generate every configuration from one system."><source src="img/v-checkout.webm" type="video/webm"><source src="img/v-checkout.mp4" type="video/mp4"></video><figcaption>One configurable component: theme, checkout type, sections, summary details and fine print</figcaption></figure>
+        <div class="kpis kpis-col">
             <div><b>15M+</b><span>sessions a month through the redesigned flow</span></div>
             <div><b>6</b><span>global markets, no market-specific redesigns</span></div>
             <div><b>4</b><span>payment plans in the same modular layout</span></div>
           </div>
-          <div class="sys-docs"><figure class="card"><img src="img/ap-anatomy2.webp" alt="Annotated checkout: optional sections, merchant hero variants, saved payment, estimated summary and disabled CTA." width="1100" height="1495" loading="lazy"><figcaption>Component variations and optional sections</figcaption></figure><figure class="card"><img src="img/ap-skeleton.webp" alt="Skeleton loading state next to the loaded payment schedule." width="800" height="1176" loading="lazy"><figcaption>Loading states and payment schedule</figcaption></figure></div>
-          <p class="quote" style="margin-top:6px">“At the point of purchase, <em>clarity is the product</em>. Every element either builds confidence or erodes it.”</p>
-        </div>
+        <p class="quote" style="margin-top:6px">“At the point of purchase, <em>clarity is the product</em>. Every element either builds confidence or erodes it.”</p>
       </div>
     </div>
   </div>
@@ -848,7 +1028,7 @@ footer{padding-block:28px 40px; font-size:13px; color:var(--muted); text-align:c
       <div class="tabs">
         <div class="tablist" role="tablist" aria-label="Systems">
           <button class="tab" role="tab" id="l0" aria-controls="lp0" aria-selected="true"><span class="label">Design system</span><span class="t">Hitch 2.0</span><span class="d">Components, icons and native mobile, documented with usage and do’s and don’ts.</span><span class="prog"></span></button>
-          <button class="tab" role="tab" id="lt" aria-controls="lpt" aria-selected="false" tabindex="-1"><span class="label">Foundations</span><span class="t">Tokens</span><span class="d">Semantic colour tokens for light and dark, with contrast ratios and usage.</span><span class="prog"></span></button>
+          <button class="tab" role="tab" id="lt" aria-controls="lpt" aria-selected="false" tabindex="-1"><span class="label">Foundations</span><span class="t">Design tokens</span><span class="d">Semantic colour tokens for light and dark, with contrast ratios and usage.</span><span class="prog"></span></button>
           <button class="tab" role="tab" id="l1" aria-controls="lp1" aria-selected="false" tabindex="-1"><span class="label">Brand</span><span class="t">Visual style</span><span class="d">Imagery direction and an overall aesthetic for product and marketing.</span><span class="prog"></span></button>
           <button class="tab" role="tab" id="l2" aria-controls="lp2" aria-selected="false" tabindex="-1"><span class="label">Marketing</span><span class="t">Email design system</span><span class="d">Marketing and transactional templates, all in light and dark mode.</span><span class="prog"></span></button>
           <button class="tab" role="tab" id="l3" aria-controls="lp3" aria-selected="false" tabindex="-1"><span class="label">Research</span><span class="t">UXR practice</span><span class="d">Journey mapping, segmentation and a searchable research library.</span><span class="prog"></span></button>
