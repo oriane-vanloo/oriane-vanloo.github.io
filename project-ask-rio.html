@@ -65,6 +65,16 @@
     .try-card ul{list-style:none;display:grid;gap:.55rem}
     .try-card li{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:.65rem .9rem;font-size:.88rem;line-height:1.4;display:flex;justify-content:space-between;gap:.8rem}
     .try-card li span{color:#94a3b8;white-space:nowrap}
+    .states{display:grid;grid-template-columns:320px 1fr;gap:2.5rem;align-items:center;margin-top:1.5rem}
+.states-vid{background:#fff;border:2px solid var(--fg);border-radius:24px;box-shadow:var(--shadow);overflow:hidden;aspect-ratio:282/232}
+.states-vid video{display:block;width:100%;height:100%;object-fit:cover}
+.states-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}
+.state-btn{text-align:left;font:inherit;background:var(--card);border:2px solid var(--fg);border-radius:14px;box-shadow:var(--shadow-sm);padding:.8rem 1rem;cursor:pointer;color:var(--fg);transition:all .2s}
+.state-btn b{display:block;font-size:.95rem;font-weight:800;margin-bottom:.1rem}
+.state-btn span{font-size:.82rem;color:var(--muted-fg);line-height:1.45}
+.state-btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--fg)}
+.state-btn[aria-pressed="true"]{background:var(--project-accent-bg)}
+.state-btn[aria-pressed="true"] span{color:var(--fg)}
     .demo{display:grid;grid-template-columns:1fr 320px;gap:2.5rem;align-items:center}
     .demo-list{display:grid;gap:.9rem}
     .demo-btn{text-align:left;font:inherit;background:var(--card);border:2px solid var(--fg);border-radius:16px;box-shadow:var(--shadow-sm);padding:1rem 1.2rem;cursor:pointer;color:var(--fg);transition:all .2s;display:block;width:100%}
@@ -86,7 +96,8 @@
     @media (max-width:860px){
       .rio-hero,.layers,.try-card{grid-template-columns:1fr}
       .bubble{max-width:300px}
-      .topics,.steps3,.moods,.shots,.panels{grid-template-columns:1fr}
+    .topics,.steps3,.moods,.shots,.panels,.states,.states-list{grid-template-columns:1fr}
+    .states-vid{max-width:360px;justify-self:center}
       .try-card{padding:1.5rem}
     }
     @media (prefers-reduced-motion:reduce){.btn-solid:hover,.btn-line:hover{transform:none}}
@@ -477,6 +488,22 @@
       </div>
     </section>
 
+<section class="case-section">
+  <h2>Rio, mood by mood</h2>
+  <p>The finished Rio runs on the same small state machine, so he reacts to what the assistant is doing. Pick a mood to jump to it, or let him run through them all.</p>
+  <div class="states">
+    <div class="states-vid"><video id="stateVideo" src="img/rio-states-3d.mp4" poster="img/rio-states-3d.jpg" autoplay muted loop playsinline aria-label="Rio the 3D toucan going through his moods: intro, thinking, success, error, falling asleep and waking up"></video></div>
+    <div class="states-list" role="group" aria-label="Choose a mood">
+      <button class="state-btn" data-start="0" aria-pressed="true"><b>Intro</b><span>Swoops in and says hello.</span></button>
+      <button class="state-btn" data-start="4.7" aria-pressed="false"><b>Thinking</b><span>Looks around while he works out an answer.</span></button>
+      <button class="state-btn" data-start="12.9" aria-pressed="false"><b>Success</b><span>A knowing wink when it lands.</span></button>
+      <button class="state-btn" data-start="14" aria-pressed="false"><b>Error</b><span>A little shake of the head.</span></button>
+      <button class="state-btn" data-start="17.4" aria-pressed="false"><b>Falls asleep</b><span>Dozes off if you leave him alone.</span></button>
+      <button class="state-btn" data-start="24" aria-pressed="false"><b>Wakes up</b><span>Perks up the moment you're back.</span></button>
+    </div>
+  </div>
+</section>
+    
     <section class="case-section" id="try">
       <h2>Rio in action</h2>
       <p>Four questions, four kinds of answer. Pick one to jump to it, or let it play through.</p>
@@ -537,6 +564,20 @@
   dv.addEventListener('timeupdate', mark);
   var rp = document.getElementById('demoReplay');
   if (rp) rp.addEventListener('click', function(){ playFrom(0); });
+  var sv = document.getElementById('stateVideo'), sbs = document.querySelectorAll('.state-btn');
+if (sv) {
+  sv.addEventListener('timeupdate', function(){
+    var t = sv.currentTime, on = sbs[0];
+    sbs.forEach(function(b){ if (t >= +b.dataset.start - 0.05) on = b; });
+    sbs.forEach(function(b){ b.setAttribute('aria-pressed', b === on ? 'true' : 'false'); });
+  });
+  sbs.forEach(function(b){
+    b.addEventListener('click', function(){
+      sv.currentTime = +b.dataset.start;
+      var p = sv.play(); if (p && p.catch) p.catch(function(){});
+    });
+  });
+}
   var names = ['Far wing feathers','Tail','Body','Near wing','Chest','Right leg','Left leg','Head','Eye patch','Eye','Head tuft','Inside of beak','Lower beak','Upper beak'];
   var ids = ['wing-far-coverts','tail','body-main','wing-near','bib','right-leg','left-leg','head-shape','eye-patch','eye','head-tuft','mouth-inside','beak-lower','beak-upper'];
   var range = document.getElementById('layerRange'), out = document.getElementById('layerName');
