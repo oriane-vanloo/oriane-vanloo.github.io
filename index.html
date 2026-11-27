@@ -716,6 +716,58 @@
       margin-top: 0.35rem;
     }
 
+
+    .company-lead-row {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: start;
+      margin: 0 0 2.75rem;
+    }
+    .company-lead-row .company-lead-wrap { margin: 0; max-width: none; }
+    .company-stats {
+      background: var(--card);
+      border: 2.5px solid var(--fg);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 1.1rem 1.25rem 1.2rem;
+    }
+    .company-stats-label {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+    .company-stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem 1rem;
+    }
+    .company-stat strong {
+      display: block;
+      font-family: 'Google Sans', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--fg);
+    }
+    .company-stat:nth-child(1) strong { color: var(--accent); }
+    .company-stat span {
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 0.78rem;
+      line-height: 1.4;
+      color: var(--muted-fg);
+    }
+    @media (max-width: 900px) {
+      .company-lead-row { grid-template-columns: 1fr; gap: 1.5rem; }
+      .company-stats { max-width: 420px; }
+    }
+
     .company-lead-wrap {
       margin: 0 0 2.75rem;
       padding: 0.15rem 0 0.15rem 1.25rem;
@@ -1258,13 +1310,19 @@
         <span class="company-strip-line"></span>
       </div>
 
+      <div class="company-lead-row">
       <div class="company-lead-wrap">
       <p class="company-lead-label">What I do</p>
       <ul class="company-lead">
-        <li>Hiring the team, setting the standards and owning the systems the whole company designs with, from building our Design System to UX Research and AI prototyping.</li>
+        <li>Hiring and onboarding designers across Melbourne and Berlin, setting the standards and owning the systems the company designs with, from Hitch 2.0 in the native app to UX Research to a shared AI prototyping workflow every designer uses.</li>
         <li>Working with Leadership and Product on where the company goes next, from future vision workshops to a funded company mission.</li>
-        <li>Giving designers projects they own end to end that push their skills towards AI, as well as helping them turn their own repetitive work into tools the wider company uses.</li>
+        <li>Giving designers projects they own end to end that push their skills towards AI, turning one-off partner microsites and ad formats into reusable frameworks, helping them build tools the wider company uses.</li>
       </ul>
+      </div>
+      <div class="company-stats">
+        <p class="company-stats-label">In numbers</p>
+        <div class="company-stats-grid"><div class="company-stat"><strong>9x</strong><span>return rate for logged-in users</span></div><div class="company-stat"><strong>+28%</strong><span>transport revenue per 1k users from multi-stop search</span></div><div class="company-stat"><strong>+19%</strong><span>transport bookings from the same search redesign</span></div><div class="company-stat"><strong>+80%</strong><span>first-time iPhone app downloads from new app prompts</span></div></div>
+      </div>
       </div>
 
 
@@ -1377,13 +1435,19 @@
         <span class="company-strip-line"></span>
       </div>
 
+      <div class="company-lead-row">
       <div class="company-lead-wrap">
       <p class="company-lead-label">What I did</p>
       <ul class="company-lead">
-        <li>Owning the part of Afterpay customers see most across global markets and setting its direction with 8+ PMs, 20+ engineers across multiple teams including risk, compliance and Cash App's design system as Afterpay joined the Cash App ecosystem.</li>
-        <li>Managing 2 freelancers and sitting on the panel that hired Cash App designers into the wider group.</li>
-        <li>Helping set our Design Crit format as well as running brown bags and workshops helping the wider team stay on the same page and focus on the big picture across time zones.</li>
+        <li>I owned the part of Afterpay customers see most across global markets and set its direction with 8+ PMs, 20+ engineers across multiple teams including risk, compliance and Cash App's design system as Afterpay joined the Cash App ecosystem.</li>
+        <li>I managed 2 freelancers and sat on the panel that hired Cash App designers into the wider group.</li>
+        <li>I helped set our Design Crit format, ran brown bags and workshops helping the wider team stay on the same page and focusing on the big picture across time zones.</li>
       </ul>
+      </div>
+      <div class="company-stats">
+        <p class="company-stats-label">In numbers</p>
+        <div class="company-stats-grid"><div class="company-stat"><strong>15M+</strong><span>checkout sessions a month across 6 markets</span></div><div class="company-stat"><strong>+200 bps</strong><span>Express checkout conversion</span></div><div class="company-stat"><strong>55s to 28s</strong><span>average checkout time</span></div><div class="company-stat"><strong>40%</strong><span>fewer validation errors</span></div></div>
+      </div>
       </div>
 
 
@@ -1783,6 +1847,42 @@
     document.querySelectorAll('#hero .fade-up').forEach((el, i) => {
       el.style.transitionDelay = `${i * 0.12}s`;
     });
+  </script>
+
+  <script>
+    /* Photos follow the cursor: the photo shifts a little and the badges move further, so they float above it. */
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+      function setup(areaSel, photoSel, badgeSel) {
+        var area = document.querySelector(areaSel);
+        if (!area) return;
+        var photo = area.querySelector(photoSel);
+        var badges = area.querySelectorAll(badgeSel);
+        var depth = [1.6, -1.3, 2.1];
+        var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
+        function frame() {
+          cx += (tx - cx) * 0.12;
+          cy += (ty - cy) * 0.12;
+          if (photo) photo.style.translate = (cx * -14).toFixed(2) + 'px ' + (cy * -14).toFixed(2) + 'px';
+          badges.forEach(function (b, i) {
+            var d = depth[i % 3];
+            b.style.translate = (cx * 22 * d).toFixed(2) + 'px ' + (cy * 22 * d).toFixed(2) + 'px';
+          });
+          raf = (Math.abs(tx - cx) > 0.001 || Math.abs(ty - cy) > 0.001) ? requestAnimationFrame(frame) : null;
+        }
+        function go() { if (!raf) raf = requestAnimationFrame(frame); }
+        area.addEventListener('mousemove', function (e) {
+          var r = area.getBoundingClientRect();
+          tx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+          ty = ((e.clientY - r.top) / r.height - 0.5) * 2;
+          go();
+        });
+        area.addEventListener('mouseleave', function () { tx = 0; ty = 0; go(); });
+      }
+      setup('#hero', '.photo-blob', '.photo-badge');
+      setup('#about', '.about-img-wrap', '.about-badge');
+    })();
   </script>
 </body>
 </html>
