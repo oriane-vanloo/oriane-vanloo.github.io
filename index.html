@@ -726,25 +726,25 @@
     }
     .company-lead-row .company-lead-wrap { margin: 0; max-width: none; }
     .company-stats {
-      background: var(--card);
-      border: 2.5px solid var(--fg);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      padding: 1.1rem 1.25rem 1.2rem;
+      background: var(--bg);
+      border: 2px solid var(--fg);
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+      padding: 1.75rem;
     }
     .company-stats-label {
       font-family: 'Google Sans', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 800;
+      font-size: 0.72rem;
+      font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.8rem;
+      color: var(--fg);
+      margin-bottom: 1rem;
     }
     .company-stats-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0.9rem 1rem;
+      gap: 1.1rem 1rem;
     }
     .company-stat strong {
       display: block;
@@ -755,13 +755,12 @@
       letter-spacing: -0.02em;
       color: var(--fg);
     }
-    .company-stat:nth-child(1) strong { color: var(--accent); }
     .company-stat span {
       display: block;
       margin-top: 0.3rem;
       font-size: 0.78rem;
       line-height: 1.4;
-      color: var(--muted-fg);
+      color: var(--fg);
     }
     @media (max-width: 900px) {
       .company-lead-row { grid-template-columns: 1fr; gap: 1.5rem; }
