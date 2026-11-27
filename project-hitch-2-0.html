@@ -32,7 +32,7 @@
       <a href="index.html#work" class="back-link">Back to work</a>
       <p class="project-company">Rome2Rio · 2024–2025</p>
       <h1 class="project-title">Hitch 2.0 <em>design system</em></h1>
-      <p class="project-lead">Rome2Rio had two separate design systems and dev stacks that had drifted apart. I unified them, defined a clear graduation path for components, and built token infrastructure that made future changes—like a typeface swap—trivial across both stacks.</p>
+      <p class="project-lead">Rome2Rio had two design systems and two dev stacks that had slowly drifted apart. I merged them into one, set up a clear path for components to follow and put tokens in place so that big changes, like swapping the typeface, became easy across both stacks.</p>
       <div class="project-tags">
         <span class="project-tag">Design systems</span>
         <span class="project-tag">Token architecture</span>
@@ -60,7 +60,7 @@
 
     <section class="case-section">
       <h2>The problem</h2>
-      <p>Designers hunted across Figma files. Engineers couldn't find components quickly. Storybook mixed old and new versions with no clear path forward. Token naming didn't match between stacks. Every new feature meant rework. This wasn't just inconvenient – it was an organisational efficiency tax.</p>
+      <p>Designers spent a lot of time hunting through Figma files for the right component while engineers had the same trouble finding things in code. Storybook had old and new versions side by side with no clear way to move from one to the other while the token names didn't match between our two stacks. Almost every new feature meant some rework which added up to a lot of lost time.</p>
     </section>
 
     <section class="case-section">
@@ -71,49 +71,47 @@
           <div class="step-num">1</div>
           <div class="step-content">
             <strong>Single source of truth</strong>
-            <span>Unified Figma library replacing two systems, with naming conventions audited with engineering. Component showcase at <code>/design-system/hitch-2-0</code> showing usage and code snippets.</span>
+            <span>One Figma library to replace the two we had, with naming conventions checked against engineering. A component showcase at <code>/design-system/hitch-2-0</code> shows how each component is used, with code snippets.</span>
           </div>
         </div>
         <div class="process-step">
           <div class="step-num">2</div>
           <div class="step-content">
             <strong>Token system</strong>
-            <span>OKLCH + APCP colour model. Semantic tokens (e.g. <code>color.action.primary</code>) rather than primitives, so design intent was captured and theming became systematic.</span>
+            <span>OKLCH and APCP for colour as well as semantic tokens such as <code>color.action.primary</code> instead of raw values, so the intent behind a colour is captured and theming works the same way everywhere.</span>
           </div>
         </div>
         <div class="process-step">
           <div class="step-num">3</div>
           <div class="step-content">
             <strong>Graduation path</strong>
-            <span>Six-step process: propose, validate, build, adopt, graduate, maintain. Same path works at any scale so teams know exactly where a component is.</span>
+            <span>Six steps: propose, validate, build, adopt, graduate, maintain. It works at any size, so anyone can tell where a component stands.</span>
           </div>
         </div>
         <div class="process-step">
           <div class="step-num">4</div>
           <div class="step-content">
             <strong>Documentation</strong>
-            <span>Storybook with documented states. Usage notes, do's/don'ts, accessibility guidance. Clear migration paths for deprecated components.</span>
+            <span>Storybook with every state documented, usage notes, do’s and don’ts, accessibility guidance and clear migration paths for anything we deprecate.</span>
           </div>
         </div>
       </div>
     </section>
 
     <div class="pull-quote">
-      <p>"When I suggested switching from Roboto to Google Sans, the entire product's typography changed in a day with zero rework. That's what infrastructure thinking looks like."</p>
+      <p>“We went from Roboto to Google Sans across the whole product in a day, with no rework.”</p>
     </div>
 
     <section class="case-section">
-      <h2>How infrastructure compounds</h2>
-      <p>Rome2Rio wanted to feel more approachable, so I suggested a typeface change. In a fragmented system, this would have meant hunting through dozens of Figma files, updating each one, hoping nothing broke, coordinating across stacks.</p>
+      <h2>Changing the typeface</h2>
+      <p>Rome2Rio wanted to feel more approachable so I made the case for replacing Roboto with a more human typeface. There was no budget and leadership had other priorities and they were worried about the extra space a new font takes up on the page. I told them the typeface carries the brand in every interaction and is easier to read and that we could design components with more white space in mind, which helps reading even more.</p>
 
-      <p>Because I'd tokenised typography early, it was trivial: one token update in Figma, and every component using that token updated automatically. The switch happened in a day with zero rework. That single token did months of compounding work – it unlocked the ability to make global changes easily, forever.</p>
+      <p>Once they were on board the tokens did the rest. Before Hitch this would have meant opening dozens of Figma files, updating each one by hand and coordinating across both stacks while hoping nothing broke. Because typography was already tokenised, I updated one token in Figma and every component using it followed. The switch to Google Sans took a day, and any future global change should be just as quick.</p>
     </section>
 
     <section class="case-section">
-      <h2>Making the case with no budget</h2>
-      <p>Rome2Rio wanted to feel more approachable, so I made the case for replacing Roboto with a more human typeface. There was no budget, leadership had other priorities and they were worried about the extra space a new font takes up on the page. I argued that the typeface carries the brand in every interaction and is easier to read. I also showed that we could design components with more white space in mind, which makes reading easier still. The tokens made the switch to Google Sans cheap, but the decision still had to be won.</p>
-
-      <p>A system only works if people use it, so I treat adoption as part of the job. The six-step graduation path tells anyone where a component stands. Every component ships with usage guidance and do’s and don’ts. I own Hitch across web, native and marketing, so decisions are made once and shared company-wide.</p>
+      <h2>Getting people to use it</h2>
+      <p>None of this matters if nobody uses it so a lot of my time goes into adoption. The six-step path means anyone can see where a component stands. Every component comes with guidance and do’s and don’ts. I look after Hitch across web, native and marketing which means decisions are made once and shared across the company.</p>
     </section>
 
     <section class="case-section">
@@ -129,7 +127,7 @@
         </div>
         <div class="outcome-cell">
           <span class="outcome-num">→</span>
-          <span class="outcome-label">Foundation for dark mode, iOS and Android extensions</span>
+          <span class="outcome-label">Dark mode, iOS and Android can now build on it</span>
         </div>
       </div>
     </section>
